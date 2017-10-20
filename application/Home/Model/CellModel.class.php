@@ -1,7 +1,7 @@
 <?php
 namespace Home\Model;
-use Think\Controller;
+use Think\Model;
 
-class CellModel extends Controller{
+class CellModel extends Model{
 
 }

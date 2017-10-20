@@ -188,6 +188,36 @@
 </body>
 <script>
 $('#cell-submit').click(function(){
+	if ($('#name').val().trim() == '') {
+			alert('请填写姓名！');
+			return;
+		}
+		if($('#tel').val() == ''){
+      		alert('请填写手机号');
+      		return;
+    	}else if(!/^1[34578]\d{9}$/.test($('#tel').val())){
+      		alert('手机号不正确');
+      		return;
+    	}
+    	if ($('#cell-function').val() == '1') {
+	    	if ($('#cell-province').val() == '请选择' || $('#cell-city').val() == '请选择' || $('#cell-county').val() == '请选择') {
+	    		alert('请选择地址！');
+	    		return;
+	    	}
+    	}else if($('#cell-function').val() == '2' || $('#cell-function').val() == '3'){
+
+    		if ($('#province').val() == '-1' || $('#citys').val() == '-1' || $('#county').val() == '-1') {
+	    		alert('请选择地址！');
+	    		return;
+	    	}
+
+    	}
+		if ($('#cell-text').val().trim() == '') {
+	 		alert('请填写详细地址');return false;
+		}else if($('#cell-text').val().trim().length < 5){
+	  		alert('详细地址太少');return false;
+		}
+if ($('#select-checkbox').is(':checked')){
 	var path1="";
 	var model_number=$('#cell-model').find('option:selected').html();
 	var Damage_reason="电池";
@@ -195,8 +225,7 @@ $('#cell-submit').click(function(){
 	var user=$('#name').val();
 	var Contact=$("#tel").val();
 	var path2=$('#cell-text').val();
-	var price=$('.cell-footer-l').find('span').text();
-	
+	var price=$('.cell-footer-l').find('b').text();
 	if(Service=="上门维修"){
 		var path3=$('#cell-province').find('option:selected').html();
 		var path4=$('#cell-city').find('option:selected').html();
@@ -235,8 +264,8 @@ $('#cell-submit').click(function(){
 				Service:Service,
 				price:price,
 			},
-			success:function($data){
-				if($data){
+			success:function(data){
+				if(data){
 					window.location.href='/shouji/index.php/Succeed/index';
 				}
 			}
@@ -245,8 +274,7 @@ $('#cell-submit').click(function(){
 		var path3=$('#province').find('option:selected').html();
 		var path4=$('#citys').find('option:selected').html();
 		var path5=$('#county').find('option:selected').html();
-		$.ajax({
-			type:'POST',
+		$.ajax({type:'POST',
 			url:'/shouji/index.php/Cell/insert',
 			data:{
 				model_number:model_number,
@@ -257,12 +285,14 @@ $('#cell-submit').click(function(){
 				Service:Service,
 				price:price,
 			},
-			success:function($data){
-				if($data){
+			success:function(data){
+				if(data){
 					window.location.href='/shouji/index.php/Succeed/index';
 				}
 			}
+		});
 	}
+}
 });
 </script>
 </html>
