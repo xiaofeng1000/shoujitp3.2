@@ -99,17 +99,17 @@
 		</div>
 		<div class="cell-order-member">
 			<select id="screen-color">
-<<<<<<< HEAD
+
 				<option value="1">金色</option>
 				<option value="2">黑色</option>
 				<option value="3">白色</option>
-=======
+
 				<!-- <option value="1">金色</option>
 				<option value="2">黑色</option>
 				<option value="3">白色</option> -->
 				<?php
  for($i=0;$i<count($color);$i++){ echo "<option value='$i+1'>$color[$i]</option>"; } ?>
->>>>>>> 894ec2eddc9461d088b06a00b9c777ddb6922a1b
+
 			</select>
 		</div>
 		<div class="cell-order-member">
@@ -191,8 +191,6 @@
 		<div class="cell-footer-r" id="cell-submit">提交订单</div>
 	</div>
 </body>
-<<<<<<< HEAD
-=======
 <script>
 $(function(){
 	var color=$('#cell-model').find('option:selected').html();
@@ -225,6 +223,36 @@ $(function(){
 });
 
 $('#cell-submit').click(function(){
+	if ($('#name').val().trim() == '') {
+			alert('请填写姓名！');
+			return;
+		}
+		if($('#tel').val() == ''){
+      		alert('请填写手机号');
+      		return;
+    	}else if(!/^1[34578]\d{9}$/.test($('#tel').val())){
+      		alert('手机号不正确');
+      		return;
+    	}
+    	if ($('#cell-function').val() == '1') {
+	    	if ($('#cell-province').val() == '请选择' || $('#cell-city').val() == '请选择' || $('#cell-county').val() == '请选择') {
+	    		alert('请选择地址！');
+	    		return;
+	    	}
+    	}else if($('#cell-function').val() == '2' || $('#cell-function').val() == '3'){
+
+    		if ($('#province').val() == '-1' || $('#citys').val() == '-1' || $('#county').val() == '-1') {
+	    		alert('请选择地址！');
+	    		return;
+	    	}
+
+    	}
+		if ($('#cell-text').val().trim() == '') {
+	 		alert('请填写详细地址');return false;
+		}else if($('#cell-text').val().trim().length < 5){
+	  		alert('详细地址太少');return false;
+		}
+if ($('#select-checkbox').is(':checked')){
 	var path="";
 	var model_number=$('#cell-model').find('option:selected').html();
 	var Damage_reason=$('#screen-ab').find('option:selected').html();
@@ -304,7 +332,10 @@ $('#cell-submit').click(function(){
 			}
 		});
 	}
+}else{
+	alert('请仔细阅读手机服务条款');
+	return;
+}	
 });
 </script>
->>>>>>> 894ec2eddc9461d088b06a00b9c777ddb6922a1b
 </html>

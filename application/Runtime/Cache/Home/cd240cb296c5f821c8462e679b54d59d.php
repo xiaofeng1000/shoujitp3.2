@@ -219,6 +219,49 @@ $('#cell-submit').click(function(){
 				}
 			}
 		});
+	}else if(Service=="邮寄维修"){
+		var path3=$('#province').find('option:selected').html();
+		var path4=$('#citys').find('option:selected').html();
+		var path5=$('#county').find('option:selected').html();
+		$.ajax({
+			type:'POST',
+			url:'/shouji/index.php/Cell/insert',
+			data:{
+				model_number:model_number,
+				Damage_reason:Damage_reason+price,
+				user:user,
+				Contact:Contact,
+				path1:path3+path4+path5+path2,
+				Service:Service,
+				price:price,
+			},
+			success:function($data){
+				if($data){
+					window.location.href='/shouji/index.php/Succeed/index';
+				}
+			}
+		});
+	}else if(Service=="到店维修"){
+		var path3=$('#province').find('option:selected').html();
+		var path4=$('#citys').find('option:selected').html();
+		var path5=$('#county').find('option:selected').html();
+		$.ajax({
+			type:'POST',
+			url:'/shouji/index.php/Cell/insert',
+			data:{
+				model_number:model_number,
+				Damage_reason:Damage_reason+price,
+				user:user,
+				Contact:Contact,
+				path1:path3+path4+path5+path2,
+				Service:Service,
+				price:price,
+			},
+			success:function($data){
+				if($data){
+					window.location.href='/shouji/index.php/Succeed/index';
+				}
+			}
 	}
 });
 </script>
