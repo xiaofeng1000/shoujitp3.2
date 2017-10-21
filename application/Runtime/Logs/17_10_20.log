@@ -3301,7 +3301,7 @@ INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
 NOTIC: [8] Undefined index: id D:\wamp\www\shouji\application\Home\Controller\IndexController.class.php 第 6 行.
 NOTIC: [2] mysqli::mysqli():  D:\wamp\www\shouji\ThinkPHP\Library\Think\Db\Driver\Mysqli.class.php 第 44 行.
-ERR: Acc�s refus� pour l'utilisateur: 'root'@'@localhost' (mot de passe: NON)
+ERR: Acc? refus?pour l'utilisateur: 'root'@'@localhost' (mot de passe: NON)
 =======
 [ 2017-10-20T14:18:57+08:00 ] ::1 /shouji/index.php/Shell/index
 INFO: [ app_init ] --START--
@@ -6335,4 +6335,25 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
 
->>>>>>> b28573fdc2cbf76b331069852b5e4337d7139234
+
+[ 2017-10-20T18:40:49+08:00 ] ::1 /shouji/admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+
