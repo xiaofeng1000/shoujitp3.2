@@ -42,6 +42,7 @@ class ScreenController extends Controller{
 		$path=$_POST['path'];
 		$Service=$_POST['Service'];
 		$price=$_POST['price'];
+		// dump($price);
 		$data=array("Model_number"=>$Model_number,"color"=>$color,"Damage_reason"=>$Damage_reason,"user"=>$user,"Contact"=>$Contact,"path"=>$path,"Service"=>$Service,"total_cost"=>$price);
 
 		$Model=M('information');
@@ -50,6 +51,7 @@ class ScreenController extends Controller{
 		$obj=$Model->add($data);
 
 		if($obj){
+			dump($price);
 			echo "ok";
 		}
 	}

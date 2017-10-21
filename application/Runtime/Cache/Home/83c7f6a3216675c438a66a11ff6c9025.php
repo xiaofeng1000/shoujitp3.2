@@ -261,7 +261,8 @@ if ($('#select-checkbox').is(':checked')){
 	var user=$('#name').val();
 	var Contact=$("#tel").val();
 	var path2=$('#cell-text').val();
-	var price=$('.cell-footer-l').find('span').text();
+	var price=$('.cell-footer-l').find('b').text();
+	console.log(price);
 	if(Service=="上门维修"){
 		var path3=$('#cell-province').find('option:selected').html();
 		var path4=$('#cell-city').find('option:selected').html();
@@ -281,7 +282,7 @@ if ($('#select-checkbox').is(':checked')){
 			},
 			success:function(data){
 				if(data){
-					window.location.href='/shouji/index.php/Succeed/index';
+					// window.location.href='/shouji/index.php/Succeed/index';
 				}
 			}
 		});

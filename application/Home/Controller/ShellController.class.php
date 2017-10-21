@@ -50,12 +50,14 @@ class ShellController extends Controller{
 		$path=$_POST['path'];
 		$Service=$_POST['Service'];
 		$price=$_POST['price'];
+		dump($price);
 		$data=array("Model_number"=>$Model_number,"color"=>$color,"Damage_reason"=>$Damage_reason,"user"=>$user,"Contact"=>$Contact,"path"=>$path,"Service"=>$Service,"total_cost"=>$price);
-
+		dump($data);
 		$Model=M('information');
 		
 
 		$obj=$Model->add($data);
+		echo $Model->getLastSql();
 
 		if($obj){
 			echo "ok";
