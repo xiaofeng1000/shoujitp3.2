@@ -262,6 +262,7 @@ $('#cell-submit').click(function(){
 					window.location.href='/shouji/index.php/Succeed/index';
 				}
 			}
+	});
 	}
 });
 </script>

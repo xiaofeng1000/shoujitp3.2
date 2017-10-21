@@ -13,7 +13,6 @@ $(function(){
 	
 	});
 	$.region();
-<<<<<<< HEAD
 	$('#cell-submit').click(function(){
 
 		if ($('#name').val().trim() == '') {
@@ -53,7 +52,6 @@ $(function(){
 			return;
 		}
 	});
-=======
 	// $('#cell-submit').click(function(){
 
 	// 	if ($('#name').val().trim() == '') {
@@ -93,7 +91,6 @@ $(function(){
 	// 		return;
 	// 	}
 	// });
->>>>>>> 894ec2eddc9461d088b06a00b9c777ddb6922a1b
 	$('#cell-address-branch').click(function(){
 		var id = $(this).val();
 		$.ajax({
