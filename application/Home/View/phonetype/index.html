@@ -19,7 +19,7 @@
 		<div class="phoneType-head"><a href="">首页</a>选择机型</div>
 	
 		<div class="phoneType-seek">
-			<input type="text" name="" placeholder="输入要维修的手机型号">
+			<input type="text" name="Search" placeholder="输入要维修的手机型号">
 		</div>
 		<section class="m-brand">
 				<ul class="clearfix">
@@ -51,7 +51,7 @@
 				<h2>ipad</h2>
 				<ul class="clearfix">
 					<volist name='arr1' id='v'>
-						<li><a href="">{$v.Model_number}</a></li>
+						<li><a href="__APP__/fault/index">{$v.Model_number}</a></li>
 						<!-- <li><a href="">iPhone 7</a></li>
 						<li><a href="">iPhone SE</a></li>
 						<li><a href="">iPhone 6s Plus</a></li>
@@ -64,4 +64,20 @@
 		</section>
 	</div>
 </body>
+<script>
+$(".phoneType-seek>input").change(function(){
+	var Search=$('.phoneType-seek>input').val();
+	console.log('Search');
+	$.ajax({
+		type:'POST',
+		url:'/shouji/index.php/Phonetype/find',
+		data:{
+			Search:Search,
+		},
+		success:function(){
+
+		}
+	});
+});
+</script>
 </html>
