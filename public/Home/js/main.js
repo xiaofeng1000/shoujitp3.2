@@ -51,8 +51,9 @@ $(function(){
 			alert('请选择故障信息！');
 		}else{
 			var Damage_reason="";
-			var str=window.location.href;
-			str=str.substr(str.indexOf("id")+3);
+			// var str=window.location.href;
+			// str=str.substr(str.indexOf("id")+3);
+			var Model_number=$('.fault-top-r').find('h2').html();
 			var color=$('#test>li.info-select').html();
 			var info = $('.fault-info-mes-tow li.info-tow-select');
 			// console.log(info);
@@ -61,7 +62,7 @@ $(function(){
 				Damage_reason+=info[i].innerText+=",";
 			}
 			var total_cost=$('.fault-m').find('span').html();
-			// console.log(str);
+			console.log(Model_number);
 			// console.log(color);
 			// console.log(Damage_reason);
 			// console.log(total_cost);
@@ -69,7 +70,7 @@ $(function(){
 				type:'POST',
 				url:'/shouji/index.php/Fault/insert',
 				data:{
-					id:str,
+					Model_number:Model_number,
 					color:color,
 					Damage_reason:Damage_reason,
 					total_cost:total_cost,

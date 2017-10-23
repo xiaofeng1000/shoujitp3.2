@@ -18,7 +18,7 @@
 	<div class="m-big">
 		<header>
 			<img src="/shouji/Public/Home/images/logo.png">
-			<span><a href="/shouji/index.php/Orderinfo/index">查询订单</a></span>
+			<span><a href="/shouji/index.php/Enquiries/index">查询订单</a></span>
 		</header>
 		<section class="m-top">
 			<div class="nav">
