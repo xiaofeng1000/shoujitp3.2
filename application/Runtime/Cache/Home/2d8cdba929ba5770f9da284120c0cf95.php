@@ -152,14 +152,14 @@ $(function(){
 					}
 					console.log(tr);
 					$('#screen-color').html(tr);
-					alert(2);
+					// alert(2);
 					// alert(2);
 				}		
 			}
 		});
 	});
 });
-$('#cell-submit').click(function(){
+
 
 $('#cell-submit').click(function(){
 	if ($('#name').val().trim() == '') {
@@ -200,7 +200,7 @@ if ($('#select-checkbox').is(':checked')){
 	var user=$('#name').val();
 	var Contact=$("#tel").val();
 	var path2=$('#cell-text').val();
-	var price=$('.cell-footer-l').find('span').text();
+	var price=$('.cell-footer-l').find('b').text();
 	if(Service=="上门维修"){
 		var path3=$('#cell-province').find('option:selected').html();
 		var path4=$('#cell-city').find('option:selected').html();

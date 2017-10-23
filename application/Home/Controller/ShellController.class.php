@@ -4,15 +4,16 @@ use Think\Controller;
 
 class ShellController extends Controller{
 	public function index(){
+		$news=D('Shell');
 		$Model=M('screen');
-		
-		$pro=$Model->select();
+		$pro=$news->getShowIndex($Model);
+		// $pro=$Model->select();
 
-		$arr=$Model->where()->find();
+		// $arr=$Model->where()->find();
 
-		$arr=$Model->find();
+		// $arr=$Model->find();
 
-		$color=explode(",",$arr['color']);
+		$color=explode(",",$pro[0]['color']);
 		// echo $Model->getLastSql();
 		// dump($color);
 
@@ -22,14 +23,14 @@ class ShellController extends Controller{
 	}
 
 	public function select(){
+		$news=D('Shell');
 		$id=$_POST['id'];
 		$Model=M('screen');
-
-		$pro=$Model->where("sid=".$id)->find();
+		// $pro=$Model->where("sid=".$id)->find();
+		$pro=$news->getFind($Model,$id);
 		// echo $Model->getLastSql();
 
 		$color=explode(",",$pro['color']);
-		$this->assign('color1',$color1);
 		if($color){
 			$color1=json_encode($color);
 			// dump($color);
@@ -39,7 +40,7 @@ class ShellController extends Controller{
 	}
 
 	public function insert(){
-
+		$news=D('Shell');
 		
 
 		$Model_number=$_POST['Model_number'];
@@ -50,14 +51,13 @@ class ShellController extends Controller{
 		$path=$_POST['path'];
 		$Service=$_POST['Service'];
 		$price=$_POST['price'];
-		dump($price);
+		// dump($price);
 		$data=array("Model_number"=>$Model_number,"color"=>$color,"Damage_reason"=>$Damage_reason,"user"=>$user,"Contact"=>$Contact,"path"=>$path,"Service"=>$Service,"total_cost"=>$price);
-		dump($data);
+		// dump($data);
 		$Model=M('information');
-		
+		// $obj=$news->getAdd($Model,$data);
 
 		$obj=$Model->add($data);
-		echo $Model->getLastSql();
 
 		if($obj){
 			echo "ok";

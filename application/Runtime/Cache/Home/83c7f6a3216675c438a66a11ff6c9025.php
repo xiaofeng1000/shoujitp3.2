@@ -100,9 +100,9 @@
 		<div class="cell-order-member">
 			<select id="screen-color">
 
-				<option value="1">金色</option>
+				<!-- <option value="1">金色</option>
 				<option value="2">黑色</option>
-				<option value="3">白色</option>
+				<option value="3">白色</option> -->
 
 				<!-- <option value="1">金色</option>
 				<option value="2">黑色</option>
@@ -196,6 +196,7 @@ $(function(){
 	var color=$('#cell-model').find('option:selected').html();
 	$('#cell-model').change(function(){
 		var id=$(this).val();
+		// console.log(id);
 		$.ajax({
 			type:'POST',
 			url:'/shouji/index.php/Shell/select',
@@ -282,7 +283,7 @@ if ($('#select-checkbox').is(':checked')){
 			},
 			success:function(data){
 				if(data){
-					// window.location.href='/shouji/index.php/Succeed/index';
+					window.location.href='/shouji/index.php/Succeed/index';
 				}
 			}
 		});
