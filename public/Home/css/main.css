@@ -1262,7 +1262,8 @@ p.link{
 }
 .order-m img{
 	border: none;
-	width: 70px;
+	/*width: 84px;
+	height:45px;*/
     float: right;
 }
 #order-body{
@@ -1270,7 +1271,7 @@ p.link{
 }
 .order-m input{
 
-	width: 72%;
+	width: 50%;
 	font-size: 0.7rem;
 	border: none;
 	height: 100%;

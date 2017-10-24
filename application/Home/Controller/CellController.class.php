@@ -33,7 +33,7 @@ class CellController extends Controller{
 		$Model=M('information');
 
 
-		$data=array("Model_number"=>$model_number,"Damage_reason"=>$Damage_reason,"user"=>$user,"Contact"=>$Contact,"path"=>$path,"Service"=>$Service,"total_cost"=>$price);
+		$data=array("Model_number"=>$model_number,"Damage_reason"=>$Damage_reason,"user"=>$user,"Contact"=>$Contact,"path"=>$path,"Service"=>$Service,"total_cost"=>$price,"time"=>time());
 
 		// $obj=$Model->add($data);
 		$obj=$news->getInformationByAdd($Model,$data);

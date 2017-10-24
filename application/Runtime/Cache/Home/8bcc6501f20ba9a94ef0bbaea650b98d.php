@@ -16,10 +16,10 @@
 </head>
 <body>
 	<div class="phoneType-big">
-		<div class="phoneType-head"><a href="">首页</a>选择机型</div>
+		<div class="phoneType-head"><a href="/shouji/index.php/Index/index">首页</a>选择机型</div>
 	
 		<div class="phoneType-seek">
-			<input type="text" name="Search" placeholder="输入要维修的手机型号">
+			<input type="text" name="" id="txt"placeholder="输入要维修的手机型号">
 		</div>
 		<section class="m-brand">
 				<ul class="clearfix">
@@ -35,7 +35,7 @@
 		<section class="m-model phoneType-model">
 				<h2>iphone</h2>
 				<ul class="clearfix">
-					<?php if(is_array($arr)): $i = 0; $__LIST__ = $arr;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><li><a href="/shouji/index.php/fault/index"><?php echo ($v["Model_number"]); ?></a></li>
+					<?php if(is_array($arr)): $i = 0; $__LIST__ = $arr;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><li><a href="/shouji/index.php/fault/index/id/<?php echo ($v["bid"]); ?>""><?php echo ($v["Model_number"]); ?></a></li>
 						<!-- <li><a href="fault.html">iPhone 7</a></li>
 						<li><a href="fault.html">iPhone SE</a></li>
 						<li><a href="">iPhone 6s Plus</a></li>
@@ -46,7 +46,7 @@
 				</ul>
 				<h2>ipad</h2>
 				<ul class="clearfix">
-					<?php if(is_array($arr1)): $i = 0; $__LIST__ = $arr1;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><li><a href="/shouji/index.php/fault/index"><?php echo ($v["Model_number"]); ?></a></li>
+					<?php if(is_array($arr1)): $i = 0; $__LIST__ = $arr1;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><li><a href="/shouji/index.php/fault/index/id/<?php echo ($v["bid"]); ?>"><?php echo ($v["Model_number"]); ?></a></li>
 						<!-- <li><a href="">iPhone 7</a></li>
 						<li><a href="">iPhone SE</a></li>
 						<li><a href="">iPhone 6s Plus</a></li>
@@ -60,17 +60,24 @@
 </body>
 <script>
 $(".phoneType-seek>input").change(function(){
-	var Search=$('.phoneType-seek>input').val();
-	console.log('Search');
+	var Search=document.getElementById('txt').value
+	// console.log('Search');
 	$.ajax({
 		type:'POST',
 		url:'/shouji/index.php/Phonetype/find',
 		data:{
 			Search:Search,
 		},
-		success:function(){
-
-		}
+		success:function(fi){
+			var tr="";
+			console.log(fi);
+			f= JSON.parse(fi);
+			console.log(f)
+			tr+="<ul class='clearfix'>"
+			tr+="<li><a href='/shouji/index.php/fault/index/id/"+[f.bid]+"'>"+[f.Model_number]+"</a></li></ul>"
+			// alert(1);
+			$('.phoneType-model').html(tr);
+		}	
 	});
 });
 </script>

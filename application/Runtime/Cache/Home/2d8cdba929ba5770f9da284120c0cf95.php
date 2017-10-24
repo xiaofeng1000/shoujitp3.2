@@ -141,12 +141,12 @@ $(function(){
 			},
 			success:function(data){
 				if(data){
-					console.log(data);
+					// console.log(data);
 					var tr="";
 					var color= new Array();
 					color= JSON.parse(data);
-					console.log(color);
-					console.log(color.length);
+					// console.log(color);
+					// console.log(color.length);
 					for(i=0;i<color.length;i++){
 						tr+="<option value="+(i+1)+">"+color[i]+"</option>";
 					}

@@ -23,7 +23,7 @@
 		<section class="m-top">
 			<div class="nav">
 				<div class="nav-title nav-select"><a href="">手机维修</a></div>
-				<div class="nav-title"><a href="">旧机换钱</a></div>
+				<div class="nav-title"><a href="/shouji/index.php/Updating/index">旧机换钱</a></div>
 			</div>
 			<div class="m-roll">
 		        <div><img src="/shouji/Public/Home/images/banner1.png" /></div>

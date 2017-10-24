@@ -17,7 +17,7 @@ class ServiceController extends Controller{
 		$Service=$_POST['Service'];
 		$path=$path1."".$path2;
 		$Model=M('information');
-		$data=array("user"=>$user,"Contact"=>$Contact,"path"=>$path,"Service"=>$Service);
+		$data=array("user"=>$user,"Contact"=>$Contact,"path"=>$path,"Service"=>$Service,"time"=>time());
 		$pro=$Model->where("id=".$id)->save($data);
 		if($pro){
 			echo $id;

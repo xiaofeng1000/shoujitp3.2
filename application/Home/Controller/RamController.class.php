@@ -23,7 +23,7 @@ class RamController extends Controller{
 		$Service=$_POST['Service'];
 		$price=$_POST['price'];
 
-		$data=array("Model_number"=>$model_number,"Damage_reason"=>$Damage_reason,"user"=>$user,"Contact"=>$Contact,"path"=>$path,"Service"=>$Service,"total_cost"=>$price);
+		$data=array("Model_number"=>$model_number,"Damage_reason"=>$Damage_reason,"user"=>$user,"Contact"=>$Contact,"path"=>$path,"Service"=>$Service,"total_cost"=>$price,"time"=>time());
 		// dump($data);
 		$Mod=M('information');
 
