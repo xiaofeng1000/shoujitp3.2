@@ -26,19 +26,17 @@
 					<div class="orderinfo-time">
 						<p>订单编号：<?php echo ($v["id"]); ?></p>
 						<p>下单时间：<?php echo (date('Y-m-d',$v["time"])); ?></p>
-					</div>
-					
+					</div>	
 					<span class="orderinfo-button">已下单</span>
 				</div>
+
 				<div class="clearfix orderinfo-info-box">
 					<div class="orderinfo-info">
-						<img src="<?php echo ($v["image"]); ?>">			
+						<img src="/shouji/Public/Home/<?php echo ($v["image"]); ?>">			
 					</div>
 					<div class="orderinfo-mes">
 						<p><?php echo ($v["Model_number"]); ?></p>
-						<?php
- $Damage=explode(",",$v.Damage_reason); for($i=0;$i<count($Damage);$i++){ $Damagereason[$i]=substr($Damage[$i],0,stripos($Damage[$i],'￥')); if($Damagereason[$i]){ echo "<p>$Damagereason</p>"; } } ?>
-						<!-- <p>内屏显示异常</p> -->
+						<p><?php echo ($v["Damage_reason"]); ?></p>
 					</div>
 					<div class="orderinfo-price">
 						<span>￥</span><b><?php echo ($v["total_cost"]); ?></b>

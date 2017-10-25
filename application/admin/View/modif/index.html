@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="__PUBLIC__/admin/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__PUBLIC__/admin/js/jquery.js"></script>
+</head>
+
+<body>
+	<include file="public:left" />
+	<div class="place">
+		<span>位置：</span>
+		<ul class="placeul">
+    		<li><a href="#">添加手机分类</a></li>
+    	</ul>
+	</div>
+
+	<div class="mainindex">
+		<table class="table ">
+            <tr>
+            	<th>品牌</th>
+            	<th>是否删除</th>
+            </tr>
+            <volist name='pro' id='v'>
+                <tr>
+                	<td>{$v.brands}</td>
+                	<td><input type="button" value="删除" onclick="delBbs({$v.id})"></td>
+                </tr>
+            </volist>
+        </table>
+		<label>要添加的手机品牌</label><input type="text" id="txt">
+		<button type="button" id="byt">添加</button>
+	</div>
+
+</body>
+<script>
+$('#byt').click(function(){
+	var brand=$('#txt').val();
+	if(brand==""){
+		alert('请输入要添加的手机品牌');return false;
+	}
+	$.ajax({
+		type:'POST',
+		url:'/shouji/admin.php/Modif/insert',
+		data:{
+			brand:brand,
+		},
+		success:function(data){
+			if(data){
+				window.location.href='/shouji/admin.php/Brand/index';
+			}
+		}
+	});
+});
+function delBbs(id){
+    	  if(confirm("是否删除该记录？")){
+    		  window.location = "__APP__/Modif/delete/id/"+id;
+    	  }
+}
+</script>
+</html>

@@ -13,11 +13,16 @@ class EnquiriesController extends Controller{
 		// echo $con;
 		$Model=M('information');
 		$obj=$news->getFind($Model,$con);
-		// if(!$obj){
+		// $Damage=explode(",",$.Damage_reason);
+		// dump($Damage)
 
-
-		// }
-
+		for($i=0;$i<count($obj);$i++){
+			if($obj[$i]['Damage_reason']){
+				$Damage=explode(',',$obj[$i]['Damage_reason']);
+				// dump($Damage);
+				$this->assign('Damage',$Damage);
+			}
+		}
 		$this->assign('obj',$obj);
 		$this->display();
 	}
