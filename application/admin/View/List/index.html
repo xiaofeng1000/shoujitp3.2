@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="__PUBLIC__/admin/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__PUBLIC__/admin/js/jquery.js"></script>
+
+</head>
+
+
+<body>
+<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+    <li><a href="#">订单列表</a></li>
+    </ul>
+    </div>
+    
+    <div class="mainindex">
+    
+    
+        <div class="welinfo">
+            <span><img src="__PUBLIC__/admin/images/sun.png" alt="天气" /></span>
+            <b>欢迎使用修立达管理系统</b>
+        </div>
+
+        <table class="table" >
+            <thead>
+                <tr>
+                    <th>手机图片</th>
+                    <th>手机型号</th>
+                    <th>颜色</th>
+                    <th>损坏情况</th>
+                    <th>用户姓名</th>
+                    <th>联系方式</th>
+                    <th>联系地址</th>
+                    <th>服务说明</th>
+                    <th>修理价格</th>
+                    <th>下单时间</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <volist name='obj' id='v'>
+                    <tr>
+                        <td>{$v.image}</td>
+                        <td>{$v.Model_number}</td>
+                        <td>{$v.color}</td>
+                        <td>{$v.Damage_reason}</td>
+                        <td>{$v.user}</td>
+                        <td>{$v.Contact}</td>
+                        <td>{$v.path}</td>
+                        <td>{$v.Service}</td>
+                        <td>{$v.total_cost}</td>
+                        <td>{$v.time|date='Y-m-d',###}</td>  
+                    </tr>
+                </volist>
+            </tbody>
+        </table>
+
+    </div>
+</body></html>

@@ -5,7 +5,6 @@
 </head>
 
 <body>
-	<include file="public:left" />
 	<div class="place">
     	<span>位置：</span>
     	<ul class="placeul">
@@ -49,9 +48,7 @@ $('#bon').click(function(){
 			price2:price2,
 		},
 		success:function(data){
-			if(data){
-				window.location = "__APP__/Spoilage/index";
-			}
+				window.location = "__APP__/Spoilage/update";
 			
 		}
 	});

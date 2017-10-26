@@ -52,9 +52,9 @@ class SpoilageController extends Controller{
 		$Model=M('classification');
 		$obj=$news->getUpdates($Model,$id,$data);
 
-		if($obj){
-			echo "ok";
-		}
+		
+		$this->success("成功",U("Spoilage/index"));
+		
 		
 	}
 }
