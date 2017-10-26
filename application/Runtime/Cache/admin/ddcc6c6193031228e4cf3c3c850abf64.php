@@ -108,7 +108,7 @@ $(function(){
     <span>位置：</span>
     <ul class="placeul">
     <li><a href="#">首页</a></li>
-    <li><a href="#">正在受理订单</a></li>
+    <li><a href="#">受理修理损坏</a></li>
     </ul>
     </div>
     
@@ -140,15 +140,15 @@ $(function(){
     </div>  
 <script type="text/javascript">
 	$('.imgtable tbody tr:odd').addClass('odd');
-function delBbs(bbsId){
+function delBbs(id){
           if(confirm("是否删除该记录？")){
               window.location = "/shouji/admin.php/Spoilage/delete/id/"+id;
           }
       }
 
-      function updateBbs(bbsId){
+      function updateBbs(id){
           if(confirm("是否修改该记录？")){
-              window.location = "/shouji/admin.php/Spoilage/update/id/"+idd;
+              window.location = "/shouji/admin.php/Spoilage/find/id/"+id;
           }
           
       }

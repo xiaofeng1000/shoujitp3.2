@@ -53,7 +53,7 @@ $(function(){
         <li class="active"><cite></cite><a href="/shouji/admin.php/Index/index.html" target="rightFrame">订单列表</a><i></i></li>
         <li><cite></cite><a href="/shouji/admin.php/Accept/index" target="rightFrame">已受理订单</a><i></i></li>
         <li><cite></cite><a href="/shouji/admin.php/Accepted/index" target="rightFrame">正在受理订单</a><i></i></li>
-        <li><cite></cite><a href="imglist.html" target="rightFrame">图片列表</a><i></i></li>
+        <li><cite></cite><a href="/shouji/admin.php/Spoilage/index" target="rightFrame">受理修理损坏</a><i></i></li>
         <li><cite></cite><a href="imglist1.html" target="rightFrame">自定义</a><i></i></li>
         <li><cite></cite><a href="tools.html" target="rightFrame">常用工具</a><i></i></li>
         <li><cite></cite><a href="filelist.html" target="rightFrame">信息管理</a><i></i></li>
@@ -68,7 +68,7 @@ $(function(){
     </div>
     <ul class="menuson">
         <li><cite></cite><a href="/shouji/admin.php/Modif/index">修改品牌</a><i></i></li>
-        <li><cite></cite><a href="#">手机型号</a><i></i></li>
+        <li><cite></cite><a href="/shouji/admin.php/Phone/index">手机型号</a><i></i></li>
         <li><cite></cite><a href="/shouji/admin.php/Brand/index">手机品牌</a><i></i></li>
         </ul>     
     </dd>   

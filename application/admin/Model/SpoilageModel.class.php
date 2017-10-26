@@ -13,4 +13,16 @@ class SpoilageModel extends Model{
 		$obj=$Model->where("id=".$id)->delete();
 		return $obj;
 	}
+
+	public function getUpdateIndex($Model,$id){
+		
+		$pro=$Model->where("id=".$id)->find();
+		
+		return $pro;
+	}
+
+	public function getUpdates($Model,$id,$data){
+		$obj=$Model->where("id=".$id)->save($data);
+		return $obj;
+	}
 }

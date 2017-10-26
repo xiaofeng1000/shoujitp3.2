@@ -30,4 +30,31 @@ class SpoilageController extends Controller{
 			$this->success("删除损坏原因失败",U("Spoilage/index"));
 		}
 	}
+
+	public function find(){
+		$news=D('Spoilage');
+		$id=$_GET['id'];
+		$Model=M('classification');
+		$pro=$news->getUpdateIndex($Model,$id);
+		$this->assign('pro',$pro);
+		$this->display();	
+	}
+
+	public function update(){
+		$id=$_POST['id'];
+		$tabul=$_POST['tabul'];
+		$ques1=$_POST['ques1'];
+		$price1=$_POST['price1'];
+		$ques2=$_POST['ques2'];
+		$price2=$_POST['price2'];
+		$data=array("tabulation"=>$tabul,"question1"=>$ques1,"The_price1"=>$price1,"question2"=>$ques2,"The_price2"=>$price2);
+		$news=D('Spoilage');
+		$Model=M('classification');
+		$obj=$news->getUpdates($Model,$id,$data);
+
+		if($obj){
+			echo "ok";
+		}
+		
+	}
 }
