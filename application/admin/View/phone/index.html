@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>无标题文档</title>
+	<link href="__PUBLIC__/admin/css/style.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="__PUBLIC__/admin/js/jquery.js"></script>
+</head>
+
+<body>
+	<include file="public:left" />
+	<div class="place">
+		<span>位置：</span>
+		<ul class="placeul">
+    		<li><a href="#">手机型号</a></li>
+    	</ul>
+	</div>
+
+	<div class="mainindex">
+		<h1>当前负责维修的手机型号：</h1>
+		<table class="table">
+			<tr>
+				<th>型号</th>
+				<th>所属品牌</th>
+				<th>操作</th>
+			</tr>
+			
+			<volist name='pro' id='v'>
+			<tr>
+				<td>{$v.Model_number}</td>
+				<td>{$v.brands}</td>
+				<td>
+					<input type="button" value="修改" onclick="updateBbs({$v.bid})">
+                    <input type="button" value="删除" onclick="delBbs({$v.bid})">
+				</td>
+			</tr>
+			</volist>
+		</table>
+		<button type="button" id="phadd">添加手机型号</button>
+	</div>
+</body>
+
+<script>
+function delBbs(id){
+	if(confirm("是否删除该记录？")){
+              window.location = "__APP__/Phone/delete/id/"+id;
+          }
+    }
+
+function updateBbs(id){
+          if(confirm("是否修改该记录？")){
+              window.location = "__APP__/Phone/find/id/"+id;
+          }
+}
+
+$('#phadd').click(function(){
+	window.location = "/shouji/admin/Phone/add/";
+});
+</script>
+</html>

@@ -36,4 +36,29 @@ class ModifController extends Controller{
 			$this->success("删除记录失败！",U("Brand/index"));
 		}
 	}
+
+	public function show(){
+		$id=$_GET['id'];
+		$news=D('Modif');
+		$Model=M('shouji');
+		$pro=$news->getFS($Model,$id);
+
+		$this->assign('pro',$pro);
+		$this->display();
+	}
+
+	public function update(){
+		$id=$_POST['id'];
+		$brand=$_POST['brand'];
+		$data=array("brands"=>$brand);
+
+		$Model=M('shouji');
+		$news=D('Modif');
+
+		$pro=$news->getUS($Model,$id,$data);
+
+		if($pro){
+			echo "ok";
+		}
+	}
 }

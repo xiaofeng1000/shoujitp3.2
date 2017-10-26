@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>无标题文档</title>
+	<link href="__PUBLIC__/admin/css/style.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="__PUBLIC__/admin/js/jquery.js"></script>
+</head>
+
+<body>
+	<include file="public:left" />
+	<div class="place">
+		<span>位置：</span>
+		<ul class="placeul">
+    		<li><a href="#">修改手机品牌</a></li>
+    	</ul>
+	</div>
+
+	<div class="mainindex">
+		<label>要修改的手机品牌</label><input type='text' value='{$pro.brands}' class="brandtext"><br/>
+		<button type="button" id="upda">确认修改手机品牌</button>
+	</div>
+</body>
+<script>
+$('#upda').click(function(){
+	var brand = $('.brandtext').val();
+	var str=window.location.href;
+	str=str.substr(str.indexOf("id")+3);
+	console.log(brand);
+	$.ajax({
+		type:'POST',
+		url:'/shouji/admin.php/Modif/update',
+		data:{
+			id:str,
+			brand:brand,
+		},
+		success:function(data){
+			if(data){
+				window.location="/shouji/admin.php/brand/index";
+			}
+		}
+	});
+});
+</script>
+</html>
