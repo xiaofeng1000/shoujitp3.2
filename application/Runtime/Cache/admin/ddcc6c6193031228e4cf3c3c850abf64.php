@@ -5,7 +5,35 @@
 <title>无标题文档</title>
 <link href="/shouji/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="/shouji/Public/admin/js/jquery.js"></script>
+<script language="javascript">
+$(function(){	
+	//导航切换
+	$(".imglist li").click(function(){
+		$(".imglist li.selected").removeClass("selected")
+		$(this).addClass("selected");
+	})	
+})	
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".click").click(function(){
+  $(".tip").fadeIn(200);
+  });
+  
+  $(".tiptop a").click(function(){
+  $(".tip").fadeOut(200);
+});
 
+  $(".sure").click(function(){
+  $(".tip").fadeOut(100);
+});
+
+  $(".cancel").click(function(){
+  $(".tip").fadeOut(100);
+});
+
+});
+</script>
 </head>
 
 
@@ -79,50 +107,51 @@ $(function(){
 	<div class="place">
     <span>位置：</span>
     <ul class="placeul">
-    <li><a href="#">订单列表</a></li>
+    <li><a href="#">首页</a></li>
+    <li><a href="#">正在受理订单</a></li>
     </ul>
     </div>
     
-    <div class="mainindex">
-    
-    
-        <div class="welinfo">
-            <span><img src="/shouji/Public/admin/images/sun.png" alt="天气" /></span>
-            <b>欢迎使用修立达管理系统</b>
-        </div>
+    <div class="rightinfo">   
+        <h1 align="content">已受理订单列表</h1>
+        <br/>
+        <table class="table">   
+        <tr>
+            <th>原因</th>
+            <th>具体原因1</th>
+            <th>修理价格1</th>
+            <th>具体原因2</th>
+            <th>修理价格2</th>
+            <th>操作</th>
+        </tr>
 
-        <table class="table" >
-            <thead>
-                <tr>
-                    <th>手机图片</th>
-                    <th>手机型号</th>
-                    <th>颜色</th>
-                    <th>损坏情况</th>
-                    <th>用户姓名</th>
-                    <th>联系方式</th>
-                    <th>联系地址</th>
-                    <th>服务说明</th>
-                    <th>修理价格</th>
-                    <th>下单时间</th>
-                </tr>
-            </thead>
+        <?php if(is_array($obj)): $i = 0; $__LIST__ = $obj;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><tr>
+                <td><?php echo ($v["tabulation"]); ?></td>
+                <td><?php echo ($v["question1"]); ?></td>
+                <td><?php echo ($v["The_price1"]); ?></td>
+                <td><?php echo ($v["question2"]); ?></td>
+                <td><?php echo ($v["The_price2"]); ?></td>
+                <td>
+                    <input type="button" value="修改" onclick="updateBbs(<?php echo ($v["id"]); ?>)">
+                    <input type="button" value="删除" onclick="delBbs(<?php echo ($v["id"]); ?>)">
+                </td>
+            </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+        </table> 
+    </div>  
+<script type="text/javascript">
+	$('.imgtable tbody tr:odd').addClass('odd');
+function delBbs(bbsId){
+          if(confirm("是否删除该记录？")){
+              window.location = "/shouji/admin.php/Spoilage/delete/id/"+id;
+          }
+      }
 
-            <tbody>
-                <?php if(is_array($obj)): $i = 0; $__LIST__ = $obj;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><tr>
-                        <td><?php echo ($v["image"]); ?></td>
-                        <td><?php echo ($v["Model_number"]); ?></td>
-                        <td><?php echo ($v["color"]); ?></td>
-                        <td><?php echo ($v["Damage_reason"]); ?></td>
-                        <td><?php echo ($v["user"]); ?></td>
-                        <td><?php echo ($v["Contact"]); ?></td>
-                        <td><?php echo ($v["path"]); ?></td>
-                        <td><?php echo ($v["Service"]); ?></td>
-                        <td><?php echo ($v["total_cost"]); ?></td>
-                        <td><?php echo (date('Y-m-d',$v["time"])); ?></td>  
-                    </tr><?php endforeach; endif; else: echo "" ;endif; ?>
-            </tbody>
-        </table>
-
-    </div>
+      function updateBbs(bbsId){
+          if(confirm("是否修改该记录？")){
+              window.location = "/shouji/admin.php/Spoilage/update/id/"+idd;
+          }
+          
+      }
+</script>
 </body>
 </html>

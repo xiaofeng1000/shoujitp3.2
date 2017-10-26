@@ -50,7 +50,7 @@ $(function(){
     	<ul class="menuson">
         <li class="active"><cite></cite><a href="/shouji/admin.php/Index/index.html" target="rightFrame">订单列表</a><i></i></li>
         <li><cite></cite><a href="/shouji/admin.php/Accept/index" target="rightFrame">已受理订单</a><i></i></li>
-        <li><cite></cite><a href="form.html" target="rightFrame">添加编辑</a><i></i></li>
+        <li><cite></cite><a href="/shouji/admin.php/Accepted/index" target="rightFrame">正在受理订单</a><i></i></li>
         <li><cite></cite><a href="imglist.html" target="rightFrame">图片列表</a><i></i></li>
         <li><cite></cite><a href="imglist1.html" target="rightFrame">自定义</a><i></i></li>
         <li><cite></cite><a href="tools.html" target="rightFrame">常用工具</a><i></i></li>
@@ -66,32 +66,10 @@ $(function(){
     </div>
     <ul class="menuson">
         <li><cite></cite><a href="/shouji/admin.php/Modif/index">修改品牌</a><i></i></li>
-        <li><cite></cite><a href="#">发布信息</a><i></i></li>
+        <li><cite></cite><a href="#">手机型号</a><i></i></li>
         <li><cite></cite><a href="/shouji/admin.php/Brand/index">手机品牌</a><i></i></li>
         </ul>     
-    </dd> 
-    
-    
-    <dd><div class="title"><span><img src="/shouji/Public/admin/images/leftico03.png" /></span>编辑器</div>
-    <ul class="menuson">
-        <li><cite></cite><a href="#">自定义</a><i></i></li>
-        <li><cite></cite><a href="#">常用资料</a><i></i></li>
-        <li><cite></cite><a href="#">信息列表</a><i></i></li>
-        <li><cite></cite><a href="#">其他</a><i></i></li>
-    </ul>    
-    </dd>  
-    
-    
-    <dd><div class="title"><span><img src="/shouji/Public/admin/images/leftico04.png" /></span>日期管理</div>
-    <ul class="menuson">
-        <li><cite></cite><a href="#">自定义</a><i></i></li>
-        <li><cite></cite><a href="#">常用资料</a><i></i></li>
-        <li><cite></cite><a href="#">信息列表</a><i></i></li>
-        <li><cite></cite><a href="#">其他</a><i></i></li>
-    </ul>
-    
     </dd>   
-    
     </dl>
 </body>
 </html>
