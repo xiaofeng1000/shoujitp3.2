@@ -74,6 +74,7 @@ $(document).ready(function(){
             </tr>
         </volist>
         </table> 
+        <button type="button" id="inse">添加修理范围</button>  
     </div>  
 <script type="text/javascript">
 	$('.imgtable tbody tr:odd').addClass('odd');
@@ -89,6 +90,9 @@ function delBbs(id){
           }
           
       }
+$('#inse').click(function(){
+    window.location = "__APP__/Spoilage/add";
+});
 </script>
 </body>
 </html>

@@ -1,10 +1,7 @@
-<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>无标题文档</title>
-<link href="/shouji/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="/shouji/Public/admin/js/jquery.js"></script>
+
 </head>
 
 <body>
@@ -75,60 +72,78 @@ $(function(){
 </html>
 
 	<div class="place">
-		<span>位置：</span>
-		<ul class="placeul">
-    		<li><a href="#">管理手机分类</a></li>
+    	<span>位置：</span>
+    	<ul class="placeul">
+    		<li><a href="#">首页</a></li>
+    		<li><a href="#">受理修理损坏</a></li>
     	</ul>
-	</div>
+    </div>
 
-	<div class="mainindex">
-		<table class="table ">
-            <tr>
-            	<th>品牌</th>
-            	<th>操作</th>
-            </tr>
-            <?php if(is_array($pro)): $i = 0; $__LIST__ = $pro;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><tr>
-                	<td><?php echo ($v["brands"]); ?></td>
-                	<td>
-                		<input type="button" value="删除" onclick="delBbs(<?php echo ($v["id"]); ?>)">
-                		<input type="button" value="修改" onclick="Update(<?php echo ($v["id"]); ?>)">
-                	</td>
-                </tr><?php endforeach; endif; else: echo "" ;endif; ?>
-        </table>
-		<label>要添加的手机品牌</label><input type="text" id="txt">
-		<button type="button" id="byt">添加</button>
-	</div>
+    <div class="rightinfo">
+    	<h1>添加修理原因</h1>
 
+    	<form>
+			<label>原因</label><input type="text" value="<?php echo ($pro["tabulation"]); ?>" class="tabul"><br/>
+			<label>具体原因1</label><input type="text" value="<?php echo ($pro["question1"]); ?>" class="ques1"><br/>
+			<label>修理价格1</label><input type="text" value="<?php echo ($pro["The_price1"]); ?>" class="price1"><br/>
+			<label>具体原因2</label><input type="text" value="<?php echo ($pro["question2"]); ?>" class="ques2"><br/>
+			<label>修理价格2</label><input type="text" value="<?php echo ($pro["The_price1"]); ?>" class="price2"><br/>
+			<button id="bon" type="button">保存</button>
+    	</form>
+    </div>
 </body>
 <script>
-$('#byt').click(function(){
-	var brand=$('#txt').val();
-	if(brand==""){
-		alert('请输入要添加的手机品牌');return false;
-	}
+$('#bon').click(function(){
+	var tabul =$('.tabul').val();
+	var ques1 =$('.ques1').val();
+	var price1 =$('.price1').val();
+	var ques2 =$('.ques2').val();
+	var price2 =$('.price2').val();
+	
 	$.ajax({
 		type:'POST',
-		url:'/shouji/admin.php/Modif/insert',
-		data:{
-			brand:brand,
+		url:'/shouji/admin.php/Spoilage/insert',
+		type:{
+			tabul:tabul,
+			ques1:ques1,
+			price1:price1,
+			ques2:ques2,
+			price2:price2,
 		},
 		success:function(data){
 			if(data){
-				window.location.href='/shouji/admin.php/Brand/index';
+				window.location = "/shouji/admin.php/Spoilage/index";
 			}
 		}
 	});
 });
-function delBbs(id){
-    	  if(confirm("是否删除该记录？")){
-    		  window.location = "/shouji/admin.php/Modif/delete/id/"+id;
-    	  }
-}
+</script>
+<script language="javascript">
+$(function(){	
+	//导航切换
+	$(".imglist li").click(function(){
+		$(".imglist li.selected").removeClass("selected")
+		$(this).addClass("selected");
+	})	
+});	
 
-function Update(id){
-	if(confirm("是否修改该记录")){
-		window.location = "/shouji/admin.php/Modif/show/id/"+id;
-	}
-}
+$(document).ready(function(){
+  $(".click").click(function(){
+  $(".tip").fadeIn(200);
+  });
+  
+  $(".tiptop a").click(function(){
+  $(".tip").fadeOut(200);
+});
+
+  $(".sure").click(function(){
+  $(".tip").fadeOut(100);
+});
+
+  $(".cancel").click(function(){
+  $(".tip").fadeOut(100);
+});
+
+});
 </script>
 </html>

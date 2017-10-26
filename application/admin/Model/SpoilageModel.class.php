@@ -25,4 +25,9 @@ class SpoilageModel extends Model{
 		$obj=$Model->where("id=".$id)->save($data);
 		return $obj;
 	}
+
+	public function getAdd($Model,$data){
+		$pro=$Model->add($data);
+		return $pro;
+	}
 }

@@ -137,6 +137,7 @@ $(function(){
                 </td>
             </tr><?php endforeach; endif; else: echo "" ;endif; ?>
         </table> 
+        <button type="button" id="inse">添加修理范围</button>  
     </div>  
 <script type="text/javascript">
 	$('.imgtable tbody tr:odd').addClass('odd');
@@ -152,6 +153,9 @@ function delBbs(id){
           }
           
       }
+$('#inse').click(function(){
+    window.location = "/shouji/admin.php/Spoilage/add";
+});
 </script>
 </body>
 </html>

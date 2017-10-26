@@ -54,7 +54,26 @@ class SpoilageController extends Controller{
 
 		if($obj){
 			echo "ok";
+		}	
+	}
+
+	public function add(){
+		$this->display();
+	}
+
+	public function insert(){
+		$tabul=$_POST['tabul'];
+		$ques1=$_POST['ques1'];
+		$price1=$_POST['price1'];
+		$ques2=$_POST['ques2'];
+		$price2=$_POST['price2'];
+		$data=array("tabulation"=>$tabul,"question1"=>$ques1,"The_price1"=>$price1,"question2"=>$ques2,"The_price2"=>$price2);
+
+		$news=D('Spoilage');
+		$Model=M('classification');
+		$pro=$news->getAdd($Model,$data);
+		if($pro){
+			echo "ok";
 		}
-		
 	}
 }
