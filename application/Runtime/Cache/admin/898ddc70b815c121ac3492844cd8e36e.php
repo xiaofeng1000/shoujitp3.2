@@ -30,31 +30,33 @@
 	<div class="place">
 		<span>位置：</span>
 		<ul class="placeul">
-    		<li><a href="#">修改手机品牌</a></li>
+    		<li><a href="#">添加手机型号</a></li>
     	</ul>
 	</div>
 
-	<div class="mainindex">
-		<label>要修改的手机品牌</label><input type='text' value='<?php echo ($pro["brands"]); ?>' class="brandtext"><br/>
-		<button type="button" id="upda">确认修改手机品牌</button>
-	</div>
+	<form>
+		<label>要添加的手机型号</label><input type="text" id="tet"><br/>
+		<label>请选择手机品牌</label>
+		<select id="cell">
+			<?php if(is_array($pro)): $i = 0; $__LIST__ = $pro;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><option value="{v.id}" "><?php echo ($v["brands"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+		</select><br/>
+		<button type="button" id="add">确认添加</button>
+	</form>
 </body>
 <script>
-$('#upda').click(function(){
-	var brand = $('.brandtext').val();
-	var str=window.location.href;
-	str=str.substr(str.indexOf("id")+3);
-	console.log(brand);
+$('#add').click(function(){
+	var brand=$('#cell').find('option:selected').html();
+	var Model_number =$('#tet').val();
 	$.ajax({
 		type:'POST',
-		url:'/shouji/admin.php/Modif/update',
+		url:'/shouji/admin.php/Phone/insert',
 		data:{
-			id:str,
 			brand:brand,
+			Model_number:Model_number,
 		},
 		success:function(data){
 			if(data){
-				window.location="/shouji/admin.php/brand/index";
+				window.location="/shouji/admin.php/Phone/index"
 			}
 		}
 	});

@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>无标题文档</title>
+	<link href="__PUBLIC__/admin/css/style.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="__PUBLIC__/admin/js/jquery.js"></script>
 </head>
 
 <body>
@@ -15,46 +18,19 @@
 
     <div class="rightinfo">
     	<h1>修改修理原因</h1>
-
-    	<form>
-			<label>原因</label><input type="text" value="{$pro.tabulation}" class="tabul"><br/>
-			<label>具体原因1</label><input type="text" value="{$pro.question1}" class="ques1"><br/>
-			<label>修理价格1</label><input type="text" value="{$pro.The_price1}" class="price1"><br/>
-			<label>具体原因2</label><input type="text" value="{$pro.question2}" class="ques2"><br/>
-			<label>修理价格2</label><input type="text" value="{$pro.The_price1}" class="price2"><br/>
-			<button id="bon" type="button">保存</button>
+    	<form action="__APP__/Spoilage/update/"} method="POST" >
+			<label>原因</label><input type="text" value="{$pro.tabulation}" class="tabul" name='tabul'><br/>
+			<label>具体原因1</label><input type="text" value="{$pro.question1}" class="ques1" name='ques1'><br/>
+			<label>修理价格1</label><input type="text" value="{$pro.The_price1}" class="price1" name='price1'><br/>
+			<label>具体原因2</label><input type="text" value="{$pro.question2}" class="ques2" name='ques2'><br/>
+			<label>修理价格2</label><input type="text" value="{$pro.The_price1}" class="price2" name='price2'><br/>
+			<input type="hidden" value='{$pro.id}' name='id'>
+			<button id="bon" type="submit" >保存</button>
     	</form>
     </div>
 </body>
 <script>
-$('#bon').click(function(){
-	var tabul =$('.tabul').val();
-	var ques1 =$('.ques1').val();
-	var price1 =$('.price1').val();
-	var ques2 =$('.ques2').val();
-	var price2 =$('.price2').val();
-	var str=window.location.href;
-	str=str.substr(str.indexOf("id")+3);
-	
-	$.ajax({
-		type:'POST',
-		url:'__APP__/Spoilage/update',
-		data:{
-			id:str,
-			tabul:tabul,
-			ques1:ques1,
-			price1:price1,
-			ques2:ques2,
-			price2:price2,
-		},
-		success:function(data){
-				window.location = "__APP__/Spoilage/update";
-			
-		}
-	});
-});
-</script>
-<script language="javascript">
+
 $(function(){	
 	//导航切换
 	$(".imglist li").click(function(){
