@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>无标题文档</title>
+	<link href="__PUBLIC__/admin/css/style.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="__PUBLIC__/admin/js/jquery.js"></script>
+</head>
+
+<body>
+	<include file="public:left" />
+	<div class="place">
+		<span>位置：</span>
+		<ul class="placeul">
+    		<li><a href="#">添加手机型号</a></li>
+    	</ul>
+	</div>
+
+	<form>
+		<label>要添加的手机型号</label><input type="text" id="tet"><br/>
+		<label>请选择手机品牌</label>
+		<select id="cell">
+			<volist name='pro' id='v'>
+			<option value="{v.id}" ">{$v.brands}</option>
+			</volist>
+		</select><br/>
+		<button type="button" id="add">确认添加</button>
+	</form>
+</body>
+<script>
+$('#add').click(function(){
+	var brand=$('#cell').find('option:selected').html();
+	var Model_number =$('#tet').val();
+	$.ajax({
+		type:'POST',
+		url:'/shouji/admin.php/Phone/insert',
+		data:{
+			brand:brand,
+			Model_number:Model_number,
+		},
+		success:function(data){
+			if(data){
+				window.location="/shouji/admin.php/Phone/index"
+			}
+		}
+	});
+});
+</script>
+</html>

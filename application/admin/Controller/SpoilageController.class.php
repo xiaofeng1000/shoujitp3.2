@@ -42,6 +42,7 @@ class SpoilageController extends Controller{
 
 	public function update(){
 		$id=$_POST['id'];
+		// dump($id);
 		$tabul=$_POST['tabul'];
 		$ques1=$_POST['ques1'];
 		$price1=$_POST['price1'];
@@ -51,7 +52,15 @@ class SpoilageController extends Controller{
 		$news=D('Spoilage');
 		$Model=M('classification');
 		$obj=$news->getUpdates($Model,$id,$data);
-		$this->success("成功",U("Spoilage/index"));	
+		// dump($data);
+		// echo $Model->getLastSql();
+		// var_dump($obj);
+		if($obj){
+			$this->success("成功",U("Spoilage/index"));
+		}else{
+			$this->success('失败',U("Spoilage/index"));
+		}
+			
 	}
 
 	public function add(){

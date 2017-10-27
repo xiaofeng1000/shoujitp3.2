@@ -18,7 +18,7 @@
 
 	<div class="mainindex">
 		<h1>当前负责维修的手机型号：</h1>
-		<table class="table">
+		<table class="tablelist">
 			<tr>
 				<th>型号</th>
 				<th>所属品牌</th>
@@ -48,13 +48,13 @@ function delBbs(id){
     }
 
 function updateBbs(id){
-          if(confirm("是否修改该记录？")){
+    if(confirm("是否修改该记录？")){
               window.location = "__APP__/Phone/find/id/"+id;
-          }
+    }
 }
 
 $('#phadd').click(function(){
-	window.location = "/shouji/admin/Phone/add/";
+	window.location = "/shouji/admin.php/Phone/add";
 });
 </script>
 </html>
