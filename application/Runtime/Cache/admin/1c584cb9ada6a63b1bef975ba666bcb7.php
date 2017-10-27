@@ -27,6 +27,27 @@ $(function(){
     });
 })  
 </script>
+<div style="background:url(/shouji/Public/admin/images/topbg.gif) repeat-x;">
+    <div class="topleft">
+        <a href="main.html" target="_parent"><img src="/shouji/Public/Home/images/logo.png" title="系统首页" /></a>
+
+        <div class="topright">
+        <ul>
+            <li><a href="#">帮助</a></li>
+            <li><a href="#">关于</a></li>
+            <li><a href="/shouji/admin.php/login/index" target="_parent">退出</a></li>
+        </ul>
+
+        <div class="user">
+            欢迎<span><?php echo ($user); ?></span>用户
+            <!-- <i>消息</i>
+            <b>5</b> -->
+        </div>
+    </div>
+    </div>
+    
+    
+</div>
 <div style="width: 100%;">
     <dl class="leftmenu" style="width:10%;">    
     <dd>
@@ -38,10 +59,10 @@ $(function(){
         <li><cite></cite><a href="/shouji/admin.php/Accept/index" target="rightFrame">已受理订单</a><i></i></li>
         <li><cite></cite><a href="/shouji/admin.php/Accepted/index" target="rightFrame">正在受理订单</a><i></i></li>
         <li><cite></cite><a href="/shouji/admin.php/Spoilage/index" target="rightFrame">受理修理损坏</a><i></i></li>
-        <li><cite></cite><a href="imglist1.html" target="rightFrame">自定义</a><i></i></li>
+        <!-- <li><cite></cite><a href="imglist1.html" target="rightFrame">自定义</a><i></i></li>
         <li><cite></cite><a href="tools.html" target="rightFrame">常用工具</a><i></i></li>
         <li><cite></cite><a href="filelist.html" target="rightFrame">信息管理</a><i></i></li>
-        <li><cite></cite><a href="tab.html" target="rightFrame">Tab页</a><i></i></li>
+        <li><cite></cite><a href="tab.html" target="rightFrame">Tab页</a><i></i></li> -->
         </ul>    
     </dd>
         
@@ -62,6 +83,5 @@ $(function(){
     </div>
 </div>
 
-	
 </body>
 </html>
