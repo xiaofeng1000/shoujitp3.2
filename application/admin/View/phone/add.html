@@ -24,6 +24,11 @@
 			<option value="{v.id}" ">{$v.brands}</option>
 			</volist>
 		</select><br/>
+		<label>手机/平板</label>
+		<select class="select2" name='type'>
+			<option>手机</option>
+			<option>平板</option>
+		</select><br/>
 		<button type="button" id="add">确认添加</button>
 	</form>
 </body>
@@ -31,12 +36,14 @@
 $('#add').click(function(){
 	var brand=$('#cell').find('option:selected').html();
 	var Model_number =$('#tet').val();
+	var type=$('.select2').find('option:selected').html();
 	$.ajax({
 		type:'POST',
 		url:'/shouji/admin.php/Phone/insert',
 		data:{
 			brand:brand,
 			Model_number:Model_number,
+			ty:type,
 		},
 		success:function(data){
 			if(data){

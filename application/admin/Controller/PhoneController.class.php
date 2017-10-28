@@ -24,7 +24,13 @@ class PhoneController extends Controller{
 	public function insert(){
 		$brand=$_POST['brand'];
 		$Model_number=$_POST['Model_number'];
-		$data=array("brands"=>$brand,"Model_number"=>$Model_number);
+		$ty=$_POST['ty'];
+		if($ty=='手机'){
+			$data=array("brands"=>$brand,"Model_number"=>$Model_number,"phone"=>1,"pad"=>0);
+		}else{
+			$data=array("brands"=>$brand,"Model_number"=>$Model_number,"phone"=>0,"pad"=>1);
+		}
+		
 		$news=D('Phone');
 		$Model=M('model_number');
 		$obj=$news->getIS($Model,$data);

@@ -19,4 +19,16 @@ class IndexModel extends Model{
 			return $arr;
 		}
 	}
+
+	public function getFL($pro,$Model,$id){
+		if($id){
+			$brands=$pro->where("id=".$id)->select();
+    	 	$br=$brands[0]['brands'];
+    	 	$arr1=$Model->where("brands="."'$br'")->limit(0,8)->select();
+    	 	return $arr1;
+		}else{
+			$arr1=$Model->limit(0,8)->select();
+			return $arr1;
+		}
+	}
 }

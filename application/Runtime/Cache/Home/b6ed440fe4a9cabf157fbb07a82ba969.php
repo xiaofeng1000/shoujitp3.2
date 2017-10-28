@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html>
 <head>
 	<title>内存升级</title>
@@ -7,50 +7,50 @@
 	<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/main.css">
-	<link href="__PUBLIC__/Home/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-	<link href="__PUBLIC__/Home/css/js-image-slider.css" rel="stylesheet" type="text/css" />
-	<script type="text/javascript" src="__PUBLIC__/Home/js/jquery-3.1.1.min.js"></script>
-	<script src="__PUBLIC__/Home/js/js-image-slider.js" type="text/javascript"></script>
-	<script type="text/javascript" src="__PUBLIC__/Home/js/cell-public.js"></script>
-	<script type="text/javascript" src="__PUBLIC__/Home/js/cell-ram.js"></script>  
+	<link rel="stylesheet" type="text/css" href="/shouji/Public/Home/css/main.css">
+	<link href="/shouji/Public/Home/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="/shouji/Public/Home/css/js-image-slider.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="/shouji/Public/Home/js/jquery-3.1.1.min.js"></script>
+	<script src="/shouji/Public/Home/js/js-image-slider.js" type="text/javascript"></script>
+	<script type="text/javascript" src="/shouji/Public/Home/js/cell-public.js"></script>
+	<script type="text/javascript" src="/shouji/Public/Home/js/cell-ram.js"></script>  
 </head>
 <body>
 	<div class="cell-big">
 		<div class="cell-banner">
-			<img src="__PUBLIC__/Home/images/ram-banner.png" width="100%">
+			<img src="/shouji/Public/Home/images/ram-banner.png" width="100%">
 		</div>
 		<div id="ram">
 			<p>目前以支持内存升级需求强烈的iphone、ipad主流机型</p>
 			<div class="ram-top">
 				<ul class="ram-top1">
-					<li><img src="__PUBLIC__/Home/images/1.png"><p>10余万用户选择</p></li>
-					<li><img src="__PUBLIC__/Home/images/2.png"><p>广泛的用户好评</p></li>
-					<li><img src="__PUBLIC__/Home/images/3.png"><p>多数城市可到店</p></li>
+					<li><img src="/shouji/Public/Home/images/1.png"><p>10余万用户选择</p></li>
+					<li><img src="/shouji/Public/Home/images/2.png"><p>广泛的用户好评</p></li>
+					<li><img src="/shouji/Public/Home/images/3.png"><p>多数城市可到店</p></li>
 				</ul>
 				<ul class="ram-top1">
-					<li><img src="__PUBLIC__/Home/images/4.png"><p>数百位专业工程师</p></li>
-					<li><img src="__PUBLIC__/Home/images/5.png"><p>高品质供应链资源</p></li>
+					<li><img src="/shouji/Public/Home/images/4.png"><p>数百位专业工程师</p></li>
+					<li><img src="/shouji/Public/Home/images/5.png"><p>高品质供应链资源</p></li>
 				</ul>
 			</div>
 			<div class="ram-slider box">
 				<div class="ram-slider-member">
 					<div class="ram-slider-top">
-						<img src="__PUBLIC__/Home/images/6.png">
+						<img src="/shouji/Public/Home/images/6.png">
 					</div>
 					<p><b>128G</b><span class="w60"></span><b>16000张</b></p>
 					<p><b>16G</b><span class="w15"></span><b>2700张</b></p>
 				</div>
 				<div class="ram-slider-member">
 					<div class="ram-slider-top">
-						<img src="__PUBLIC__/Home/images/7.png">
+						<img src="/shouji/Public/Home/images/7.png">
 					</div>
 					<p><b>128G</b><span class="w60"></span><b>2800首</b></p>
 					<p><b>16G</b><span class="w15"></span><b>360首</b></p>
 				</div>
 				<div class="ram-slider-member">
 					<div class="ram-slider-top">
-						<img src="__PUBLIC__/Home/images/8.png">
+						<img src="/shouji/Public/Home/images/8.png">
 					</div>
 					<p><b>128G</b><span class="w60"></span><b>1080部</b></p>
 					<p><b>16G</b><span class="w15"></span><b>120部</b></p>
@@ -149,9 +149,9 @@
 				</ul>
 			</div>
 			<div class="ram-im">
-				<div><img src="__PUBLIC__/Home/images/9.png"></div>
-				<div><img src="__PUBLIC__/Home/images/10.png"></div>
-				<div><img src="__PUBLIC__/Home/images/11.png"></div>
+				<div><img src="/shouji/Public/Home/images/9.png"></div>
+				<div><img src="/shouji/Public/Home/images/10.png"></div>
+				<div><img src="/shouji/Public/Home/images/11.png"></div>
 			</div>
 			<div class="ram-article-box">
 				<h4>升级注意事项</h4>
@@ -190,25 +190,17 @@
 			<div class="cell-order">
 				<div class="cell-order-member">
 					<select id="cell-model">
-						<volist name="obj" id="v">
-							<option value="{$v.id}">{$v.number}</option>
+						<?php if(is_array($obj)): $i = 0; $__LIST__ = $obj;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><option value="<?php echo ($v["id"]); ?>"><?php echo ($v["number"]); ?></option>
 							<!-- <option value="2">iphone 8</option>
 							<option value="3">ipad air</option>
-							<option value="3">ipad mini2</option> -->
-						</volist>
+							<option value="3">ipad mini2</option> --><?php endforeach; endif; else: echo "" ;endif; ?>
 					</select>
 				</div>
 				<div class="cell-order-member">
 					<select id="screen-ab">
 						<option value="0">请选择</option>
 						<?php
-							for($i=0;$i<count($ram);$i++){
-								$Damagereason[$i]=substr($ram[$i],0,stripos($ram[$i],'￥'));
-								$cost[$i]=substr($ram[$i],stripos($ram[$i],'￥')+3);
-								echo "<option value='$cost[$i]'>$Damagereason[$i]</option>";
-
-							}
-						?>
+ for($i=0;$i<count($ram);$i++){ $Damagereason[$i]=substr($ram[$i],0,stripos($ram[$i],'￥')); $cost[$i]=substr($ram[$i],stripos($ram[$i],'￥')+3); echo "<option value='$cost[$i]'>$Damagereason[$i]</option>"; } ?>
 						<!-- <option value="0">请选择</option>
 						<option value="355">升级32g</option>
 						<option value="355">升级64g</option>
@@ -290,7 +282,7 @@
 				<p>我同意 <a href="help.html">《服务条款》</a></p>
 			</div>
 			<div class="cell-footer clearfix">
-				<div class="cell-footer-l"><a href="tel:10086"><img src="__PUBLIC__/Home/images/13.png"></a>客服 <span>￥<b></b></span></div>
+				<div class="cell-footer-l"><a href="tel:10086"><img src="/shouji/Public/Home/images/13.png"></a>客服 <span>￥<b></b></span></div>
 				<div class="cell-footer-r" id="cell-submit">提交订单</div>
 			</div>
 		</div>

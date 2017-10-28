@@ -1,7 +1,7 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html>
 <head>
-	<title>更换屏幕</title>
+	<title>更换外壳</title>
 	<meta charset="utf-8">
 	<meta name="format-detection" content="telephone=yes"/>
 	<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">

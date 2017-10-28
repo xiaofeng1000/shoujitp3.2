@@ -8,25 +8,7 @@
 </head>
 
 <body>
-	﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>无标题文档</title>
-<link href="/shouji/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
-<script language="JavaScript" src="/shouji/Public/admin/js/jquery.js"></script>
-
-
-
-
-</head>
-
-<body style="background:#f0f9fd;">
-    
-    
-</body>
-</html>
-
+	
 	<div class="place">
 		<span>位置：</span>
 		<ul class="placeul">
@@ -51,7 +33,7 @@
     
     	</li>
     
-    	<li><label>手机/平台<b>*</b></label>
+    	<li><label>手机/平板<b>*</b></label>
     
 	    	<div class="vocation">
 			    <select class="select2" name='type'>
