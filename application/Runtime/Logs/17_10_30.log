@@ -1,0 +1,16 @@
+[ 2017-10-30T08:46:40+08:00 ] ::1 /shouji/index.php/Shell/select
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shell` [ RunTime:0.015600s ]
+ERR: 1146:Table 'sj.shell' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `shell`
+SQL: SHOW COLUMNS FROM `screen` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `screen` WHERE ( sid=2 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015600s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015600s ]
+

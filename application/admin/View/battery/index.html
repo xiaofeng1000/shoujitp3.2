@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>无标题文档</title>
+	<link href="__PUBLIC__/admin/css/style.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="__PUBLIC__/admin/js/jquery.js"></script>
+</head>
+
+<body>
+	<include file="public:left" />
+	<div class="place">
+		<span>位置：</span>
+		<ul class="placeul">
+    		<li><a href="#">更换手机电池</a></li>
+    	</ul>
+	</div>
+	
+	<div class="mainindex">
+		<table class="tablelist">
+			<tr>
+				<th>手机型号</th>
+				<th>更换电池价格</th>
+				<th>操作</th>
+			</tr>
+
+			<volist name='pro' id='v'>
+			<tr>
+				<td>{$v.model_number}</td>
+				<td>{$v.val}</td>
+				<td>
+					<input type="button" value="修改" onclick="updateBbs({$v.iid})">
+					<input type="button" value="删除" onclick="Delete({$v.iid})">
+				</td>
+			</tr>
+			</volist>
+		</table>
+		<button type="button" id="Addprice">添加型号和价格</button>
+	</div>
+</body>
+<script>
+$(function(){	
+	//导航切换
+	$(".imglist li").click(function(){
+		$(".imglist li.selected").removeClass("selected")
+		$(this).addClass("selected");
+	})	
+});
+
+function Delete(iid){
+    if(confirm("是否删除该记录？")){
+        window.location = "__APP__/Battery/delete/id/"+iid;
+    }
+}
+
+function updateBbs(iid){
+    if(confirm("是否修改该记录？")){
+        window.location = "__APP__/Battery/find/id/"+iid;
+    }          
+}
+
+$('#Addprice').click(function(){
+	window.location = "/shouji/admin.php/Battery/add";
+})
+</script>
+</html>

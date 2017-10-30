@@ -7,7 +7,7 @@ class RamController extends Controller{
 		$news=D('Ram');
 		$Model=M('Ram');
 		$obj=$news->getShowIndex($Model);
-		$ram=explode(",",$obj[0]['Ram']);
+		$ram=explode("，",$obj[0]['Ram']);
 		// dump($ram);
 		// $obj=$Model->select();
 		$this->assign('ram',$ram);

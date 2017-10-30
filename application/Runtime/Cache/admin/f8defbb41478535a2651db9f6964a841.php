@@ -41,7 +41,7 @@ $(function(){
 		$(".imglist li.selected").removeClass("selected")
 		$(this).addClass("selected");
 	})	
-})	
+});	
 </script>
 <script type="text/javascript">
 $('#Inadd').click(function(){

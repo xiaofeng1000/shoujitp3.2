@@ -93,8 +93,8 @@
 		<div class="cell-order-member">
 			<select id="screen-ab">
 				<option value="0">请选择</option>
-				<option value="355">内屏异常</option>
-				<option value="155">外屏碎(显示正常)</option>
+				<option value="<?php echo ($price1); ?>">内屏异常</option>
+				<option value="<?php echo ($price2); ?>">外屏碎(显示正常)</option>
 			</select>
 		</div>
 		<div class="cell-order-member">
