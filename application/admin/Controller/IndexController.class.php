@@ -8,9 +8,11 @@ class IndexController extends Controller {
     	$Model=M('information');
 
     	$obj=$news->getSI($Model);
-
-
+    	// dump($_COOKIE['user']);
+    	$user=$_COOKIE['user'];
+    	$this->assign('user',$user);
     	$this->assign('obj',$obj);
         $this->display();
     }
+
 }

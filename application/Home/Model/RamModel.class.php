@@ -13,4 +13,9 @@ class RamModel extends Model{
 		$pro=$Model->add($data);
 		return $pro;
 	}
+
+	public function getFind($Model,$id){
+		$pro=$Model->where("id=".$id)->find();
+		return $pro;
+	}
 }

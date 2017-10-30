@@ -50,9 +50,16 @@ h2{font-weight:normal;}
 
 /*top.html*/
 .header{height:88px;}
-.topleft{height:88px;background:url(../images/topleft.jpg) no-repeat;float:left; width:300px;}
-.topleft img{margin-top:12px;margin-left:10px;}
-.topright{height:88px;background:url(../images/topright.jpg) no-repeat right;float:right;}
+.topleft{
+	height:88px;
+	background:url(../images/topleft.jpg) no-repeat;
+	background-size:100%;
+	float:left; 
+	width:100%;
+
+}
+.topleft img{margin-top:12px;margin-left:10px; }
+.topright{height:88px;background:url(../images/topright.jpg) no-repeat right;float:right;overflow:hidden;}
 .nav{float:left;}
 .nav li{float:left;width:87px;height:88px; text-align:center;}
 .nav li a{display:block;width:87px;height:88px;-moz-transition: none; transition: background-color 0.3s linear; -moz-transition: background-color 0.3s linear; -webkit-transition: background-color 0.3s linear; -o-transition: background-color 0.3s linear; }

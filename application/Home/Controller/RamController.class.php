@@ -5,9 +5,12 @@ use Think\Controller;
 class RamController extends Controller{
 	public function index(){
 		$news=D('Ram');
-		$Model=M('screen');
+		$Model=M('Ram');
 		$obj=$news->getShowIndex($Model);
+		$ram=explode("，",$obj[0]['Ram']);
+		// dump($ram);
 		// $obj=$Model->select();
+		$this->assign('ram',$ram);
 		$this->assign('obj',$obj);
 		$this->display();
 	}
@@ -34,5 +37,17 @@ class RamController extends Controller{
 			echo "ok";
 		}
 
+	}
+
+	public function select(){
+		$id=$_POST['id'];
+		$news=D('Ram');
+		$Model=M('Ram');
+		$pro=$news->getFind($Model,$id);
+		$ram=explode(",",$pro['Ram']);
+		if($ram){
+			$ram1=json_encode($ram);
+			echo $ram1;
+		}
 	}
 }

@@ -191,7 +191,7 @@
 				<div class="cell-order-member">
 					<select id="cell-model">
 						<volist name="obj" id="v">
-							<option value="{$v.sid}">{$v.model_number}</option>
+							<option value="{$v.id}">{$v.number}</option>
 							<!-- <option value="2">iphone 8</option>
 							<option value="3">ipad air</option>
 							<option value="3">ipad mini2</option> -->
@@ -201,9 +201,18 @@
 				<div class="cell-order-member">
 					<select id="screen-ab">
 						<option value="0">请选择</option>
+						<?php
+							for($i=0;$i<count($ram);$i++){
+								$Damagereason[$i]=substr($ram[$i],0,stripos($ram[$i],'￥'));
+								$cost[$i]=substr($ram[$i],stripos($ram[$i],'￥')+3);
+								echo "<option value='$cost[$i]'>$Damagereason[$i]</option>";
+
+							}
+						?>
+						<!-- <option value="0">请选择</option>
 						<option value="355">升级32g</option>
 						<option value="355">升级64g</option>
-						<option value="155">升级128g</option>
+						<option value="155">升级128g</option> -->
 					</select>
 				</div>
 				<div class="cell-order-member">
@@ -291,7 +300,43 @@
 	
 </body>
 <script>
+$('#cell-model').change(function(){
+	var id=$(this).val();
+	$('.cell-footer-l').find('b').text(0);
+	$.ajax({
+		type:'POST',
+		url:'/shouji/index.php/Ram/select',
+		data:{
+			id:id,
+		},
+		success:function(data){
+			var tr="";
+			var ram= new Array();
+			ram= JSON.parse(data);
+			tr+="<option value='0'>请选择</option>";
+			for(i=0;i<ram.length;i++){
+				var price=ram[i].substr(ram[i].indexOf("￥")+1);
+				var rom=ram[i].substr(0,ram[i].indexOf("￥"));
+				console.log(price);
+				console.log(rom);
+
+				tr+="<option value='"+price+"'>"+rom+"</option>";
+			}
+			$('#screen-ab').html(tr);
+		}
+	});
+});
+$('#screen-ab').change(function(){
+	var price=$('#screen-ab').find('option:selected').val();
+	console.log(price);
+	$('.cell-footer-l').find('b').text(price);
+});
 $('#cell-submit').click(function(){
+	if($('#screen-ab').find('option:selected').html()=="请选择"){
+			alert(1);
+			alert('请选择升级内存');return;
+		}
+
 	if ($('#name').val().trim() == '') {
 			alert('请填写姓名！');
 			return;
