@@ -5,7 +5,7 @@ use Think\Controller;
 class ShellController extends Controller{
 	public function index(){
 		$news=D('Shell');
-		$Model=M('screen');
+		$Model=M('shell');
 		$pro=$news->getShowIndex($Model);
 		// $pro=$Model->select();
 
@@ -13,7 +13,7 @@ class ShellController extends Controller{
 
 		// $arr=$Model->find();
 
-		$color=explode(",",$pro[0]['color']);
+		$color=explode("，",$pro[0]['colorprice']);
 		// echo $Model->getLastSql();
 		// dump($color);
 
@@ -25,17 +25,17 @@ class ShellController extends Controller{
 	public function select(){
 		$news=D('Shell');
 		$id=$_POST['id'];
-		$Model=M('screen');
+		// dump($id);
+		$Model=M('shell');
 		// $pro=$Model->where("sid=".$id)->find();
 		$pro=$news->getFind($Model,$id);
-		// echo $Model->getLastSql();
 
-		$color=explode(",",$pro['color']);
+		$color=explode("，",$pro['colorprice']);
 		if($color){
 			$color1=json_encode($color);
-			// dump($color);
+
 			echo $color1;
-			// dump($color1);
+
 		}
 	}
 

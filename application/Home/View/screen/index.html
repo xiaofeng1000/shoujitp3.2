@@ -117,6 +117,7 @@
 
 			</select>
 		</div>
+		
 		<div class="cell-order-member">
 			<select id="cell-function">
 				<option value="1">上门维修</option>
@@ -204,13 +205,14 @@ $(function(){
 		// console.log(id);
 		$.ajax({
 			type:'POST',
-			url:'/shouji/index.php/Shell/select',
+			url:'/shouji/index.php/Screen/select',
 			data:{
 				id:id,
 			},
 			success:function(data){
 				if(data){
 					console.log(data);
+					
 					var tr="";
 					var color= new Array();
 					color= JSON.parse(data);
@@ -218,9 +220,11 @@ $(function(){
 					console.log(color.length);
 					for(i=0;i<color.length;i++){
 						tr+="<option value="+(i+1)+">"+color[i]+"</option>";
+
 					}
 					console.log(tr);
 					$('#screen-color').html(tr);
+
 					// alert(2);
 				}		
 			}

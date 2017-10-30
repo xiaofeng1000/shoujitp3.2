@@ -10,7 +10,7 @@ class ShellModel extends Model{
 	}
 
 	public function getFind($model,$id){
-		$pro=$model->where("sid=$id")->find();
+		$pro=$model->where("id=$id")->find();
 		return $pro;
 	}
 

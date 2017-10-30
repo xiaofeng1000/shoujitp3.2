@@ -8,4 +8,9 @@ class ScreenModel extends Model{
 		$obj=$Model->select();
 		return $obj;
 	}
+
+	public function getFind($model,$id){
+		$pro=$model->where("sid=$id")->find();
+		return $pro;
+	}
 }

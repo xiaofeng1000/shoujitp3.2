@@ -13,7 +13,7 @@
 	<script type="text/javascript" src="/shouji/Public/Home/js/jquery-3.1.1.min.js"></script>
 	<script src="/shouji/Public/Home/js/js-image-slider.js" type="text/javascript"></script>
 	<script type="text/javascript" src="/shouji/Public/Home/js/cell-public.js"></script>
-	<script type="text/javascript" src="/shouji/Public/Home/js/cell-screen.js"></script>  
+	<script type="text/javascript" src="/shouji/Public/Home/js/cell-shell.js"></script>  
 </head>
 <body>
 	<div class="cell-big">
@@ -28,26 +28,29 @@
 		
 			<div class="cell-order-member">
 				<select id="cell-model" name="select1">
-					<?php if(is_array($pro)): $i = 0; $__LIST__ = $pro;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><option value="<?php echo ($v["sid"]); ?>"><?php echo ($v["model_number"]); ?></option>
+					<?php if(is_array($pro)): $i = 0; $__LIST__ = $pro;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><option value="<?php echo ($v["id"]); ?>"><?php echo ($v["number"]); ?></option>
 					<!-- <option value="2">iphone 8</option>
 					<option value="3">iphone 9</option> --><?php endforeach; endif; else: echo "" ;endif; ?>
 				</select>
 			</div>
-			<div class="cell-order-member">
-				<select id="screen-ab">
-					<option value="0">请选择</option>
-					<option value="355">内屏异常</option>
-					<option value="155">外屏碎(显示正常)</option>
-				</select>
-			</div>
+
 			<div class="cell-order-member">
 				<select id="screen-color">
+					<option value='0'>请选择</option>
 					<!-- <option value="1">金色</option>
 					<option value="2">黑色</option>
 					<option value="3">白色</option> -->
 					<?php
- for($i=0;$i<count($color);$i++){ echo "<option value='$i+1'>$color[$i]</option>"; } ?>
+ for($i=0;$i<count($color);$i++){ $colors[$i]=substr($color[$i],0,stripos($color[$i],"￥")); $price[$i]=substr($color[$i],stripos($color[$i],"￥")+3); echo "<option value='$price[$i]'>$colors[$i]</option>"; } ?>
 				</select>
+			</div>
+			<div class="shell-info">
+				<img src="/shouji/Public/Home/images/38.png">
+				<div>
+					<p>￥<span>368.00</span></p>
+					<p>玫瑰金后壳(改iphone7外观)</p>
+				</div>
+		
 			</div>
 			<div class="cell-order-member">
 				<select id="cell-function">
@@ -133,6 +136,7 @@ $(function(){
 	var color=$('#cell-model').find('option:selected').html();
 	$('#cell-model').change(function(){
 		var id=$(this).val();
+		console.log(id);
 		$.ajax({
 			type:'POST',
 			url:'/shouji/index.php/Shell/select',
@@ -147,8 +151,12 @@ $(function(){
 					color= JSON.parse(data);
 					// console.log(color);
 					// console.log(color.length);
+					tr+="<option value='0'>请选择</option>";
 					for(i=0;i<color.length;i++){
-						tr+="<option value="+(i+1)+">"+color[i]+"</option>";
+						colors=color[i].substr(0,color[i].indexOf("￥"));
+						price=color[i].substr(color[i].indexOf("￥")+1);
+						
+						tr+="<option value="+price+">"+colors+"</option>";
 					}
 					console.log(tr);
 					$('#screen-color').html(tr);

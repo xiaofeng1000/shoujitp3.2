@@ -61,8 +61,8 @@ $(function(){
         <li><cite></cite><a href="/shouji/admin.php/Spoilage/index" target="rightFrame">受理修理损坏</a><i></i></li>
         <li><cite></cite><a href="/shouji/admin.php/Ram/index" target="rightFrame">升级手机内存</a><i></i></li>
         <li><cite></cite><a href="/shouji/admin.php/Battery/index" target="rightFrame">更换手机电池</a><i></i></li>
-        <!--<li><cite></cite><a href="filelist.html" target="rightFrame">信息管理</a><i></i></li>
-        <li><cite></cite><a href="tab.html" target="rightFrame">Tab页</a><i></i></li> -->
+        <li><cite></cite><a href="/shouji/admin.php/Screen/index" target="rightFrame">屏幕修理</a><i></i></li>
+        <li><cite></cite><a href="/shouji/admin.php/Shell/index" target="rightFrame">更换外壳</a><i></i></li> 
         </ul>    
     </dd>
         
