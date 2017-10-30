@@ -26,17 +26,9 @@ class ShellController extends Controller{
 		$news=D('Shell');
 		$id=$_POST['id'];
 		$Model=M('screen');
-		// $pro=$Model->where("sid=".$id)->find();
 		$pro=$news->getFind($Model,$id);
-		// echo $Model->getLastSql();
-
-		$color=explode(",",$pro['color']);
-		if($color){
-			$color1=json_encode($color);
-			// dump($color);
-			echo $color1;
-			// dump($color1);
-		}
+		$string=implode('&',$pro);
+		echo $string;
 	}
 
 	public function insert(){

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html>
 <head>
 	<title>更换屏幕</title>
@@ -7,30 +7,30 @@
 	<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/main.css">
-	<link href="__PUBLIC__/Home/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-	<link href="__PUBLIC__/Home/css/js-image-slider.css" rel="stylesheet" type="text/css" />
-	<script type="text/javascript" src="__PUBLIC__/Home/js/jquery-3.1.1.min.js"></script>
-	<script src="__PUBLIC__/Home/js/js-image-slider.js" type="text/javascript"></script>
-	<script type="text/javascript" src="__PUBLIC__/Home/js/cell-public.js"></script>
-	<script type="text/javascript" src="__PUBLIC__/Home/js/cell-screen.js"></script>  
+	<link rel="stylesheet" type="text/css" href="/shouji/Public/Home/css/main.css">
+	<link href="/shouji/Public/Home/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="/shouji/Public/Home/css/js-image-slider.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="/shouji/Public/Home/js/jquery-3.1.1.min.js"></script>
+	<script src="/shouji/Public/Home/js/js-image-slider.js" type="text/javascript"></script>
+	<script type="text/javascript" src="/shouji/Public/Home/js/cell-public.js"></script>
+	<script type="text/javascript" src="/shouji/Public/Home/js/cell-screen.js"></script>  
 </head>
 <body>
 	<div class="cell-big">
 		<div class="cell-banner">
-			<img src="__PUBLIC__/Home/images/screen-banner.png" width="100%">
+			<img src="/shouji/Public/Home/images/screen-banner.png" width="100%">
 		</div>
 		<ul class="screen-serve">
-			<li><img src="__PUBLIC__/Home/images/20.png"><p>免费上门</p></li>
-			<li><img src="__PUBLIC__/Home/images/21.png"><p>原厂品质</p></li>
-			<li><img src="__PUBLIC__/Home/images/22.png"><p>全程录像</p></li>
-			<li><img src="__PUBLIC__/Home/images/23.png"><p>半年保质</p></li>
+			<li><img src="/shouji/Public/Home/images/20.png"><p>免费上门</p></li>
+			<li><img src="/shouji/Public/Home/images/21.png"><p>原厂品质</p></li>
+			<li><img src="/shouji/Public/Home/images/22.png"><p>全程录像</p></li>
+			<li><img src="/shouji/Public/Home/images/23.png"><p>半年保质</p></li>
 		</ul>
 		<div class="screen-img">
-			<img src="__PUBLIC__/Home/images/18.png" width="100%">
+			<img src="/shouji/Public/Home/images/18.png" width="100%">
 		</div>
 		<div class="screen-img">
-			<img src="__PUBLIC__/Home/images/19.png" width="100%">
+			<img src="/shouji/Public/Home/images/19.png" width="100%">
 		</div>
 		<div class="screen-phrase">
 			<h3>人们都是怎么打碎手机屏幕的呢？</h3>
@@ -38,14 +38,14 @@
 			<p> 手机从手中不慎掉落的比例最高，达到50%；而其余的原因包括从口袋里掉出（32%），从大 腿上坠地（27%），自拍时坠地（7%）和拿手机砸别人（5%）。</p>
 		</div>
 		<div class="screen-img">
-			<img src="__PUBLIC__/Home/images/15.png" width="100%">
+			<img src="/shouji/Public/Home/images/15.png" width="100%">
 		</div>
 		<div class="screen-phrase">
 			<h3>人们对于手机屏幕坏掉的反应</h3>
 			<p>在屏幕碎裂之后，不少人都并没有进行维修。根据调查，有42%的用户认为维修费用太高了， 而23%的用户会继续使用屏幕碎裂的手机，即便他们会因此割破手指。</p>
 		</div>
 		<div class="screen-img">
-			<img src="__PUBLIC__/Home/images/14.png" width="100%">
+			<img src="/shouji/Public/Home/images/14.png" width="100%">
 		</div>
 		<div class="screen-phrase">
 			<h3>为和换屏要趁早</h3>
@@ -85,18 +85,16 @@
 	<div class="cell-order">
 		<div class="cell-order-member">
 			<select id="cell-model">
-				<volist name='obj' id='v'>
-					<option value="{$v.sid}">{$v.model_number}</option>
+				<?php if(is_array($obj)): $i = 0; $__LIST__ = $obj;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><option value="<?php echo ($v["sid"]); ?>"><?php echo ($v["model_number"]); ?></option>
 					<!-- <option value="2">iphone 8</option>
-					<option value="3">iphone 9</option> -->
-				</volist>
+					<option value="3">iphone 9</option> --><?php endforeach; endif; else: echo "" ;endif; ?>
 			</select>
 		</div>
 		<div class="cell-order-member">
 			<select id="screen-ab">
 				<option value="0">请选择</option>
-				<option value="{$price1}">内屏异常</option>
-				<option value="{$price2}">外屏碎(显示正常)</option>
+				<option value="<?php echo ($price1); ?>">内屏异常</option>
+				<option value="<?php echo ($price2); ?>">外屏碎(显示正常)</option>
 			</select>
 		</div>
 		<div class="cell-order-member">
@@ -110,10 +108,7 @@
 				<option value="2">黑色</option>
 				<option value="3">白色</option> -->
 				<?php
-						for($i=0;$i<count($color);$i++){
-							echo "<option value='$i+1'>$color[$i]</option>";
-						}
-					?>
+ for($i=0;$i<count($color);$i++){ echo "<option value='$i+1'>$color[$i]</option>"; } ?>
 
 			</select>
 		</div>
@@ -192,7 +187,7 @@
 		<p>我同意 <a href="help.html">《服务条款》</a></p>
 	</div>
 	<div class="cell-footer clearfix">
-		<div class="cell-footer-l"><a href="tel:10086"><img src="__PUBLIC__/Home/images/13.png"></a>客服 <span>￥<b></b></span></div>
+		<div class="cell-footer-l"><a href="tel:10086"><img src="/shouji/Public/Home/images/13.png"></a>客服 <span>￥<b></b></span></div>
 		<div class="cell-footer-r" id="cell-submit">提交订单</div>
 	</div>
 </body>
