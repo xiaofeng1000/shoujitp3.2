@@ -196,8 +196,8 @@
 $(function(){
 	var color=$('#cell-model').find('option:selected').html();
 	$('#cell-model').change(function(){
+		$('.cell-footer-l').find('b').text('0');
 		var id=$(this).val();
-		// console.log(id);
 		$.ajax({
 			type:'POST',
 			url:'/shouji/index.php/Screen/select',
@@ -205,6 +205,7 @@ $(function(){
 				id:id,
 			},
 			success:function(data){
+<<<<<<< HEAD
 				if(data){
 					console.log(data);
 					
@@ -213,15 +214,28 @@ $(function(){
 					color= JSON.parse(data);
 					console.log(color);
 					console.log(color.length);
+=======
+				var dataArr = data.split("&");
+				var tr="";
+				var td="";
+				var color= new Array();
+					color= dataArr[2].split("，");
+					
+>>>>>>> 422c986c534d8b4a518a2bbd34f1c662bce98654
 					for(i=0;i<color.length;i++){
 						tr+="<option value="+(i+1)+">"+color[i]+"</option>";
 
 					}
-					console.log(tr);
+				
 					$('#screen-color').html(tr);
+<<<<<<< HEAD
 
 					// alert(2);
 				}		
+=======
+					td = '<option value="0">请选择</option><option value="'+dataArr[3]+'"+">内屏异常</option><option value="'+dataArr[4]+'">外屏碎(显示正常)</option>'
+					$('#screen-ab').html(td);		
+>>>>>>> 422c986c534d8b4a518a2bbd34f1c662bce98654
 			}
 		});
 	});

@@ -25,6 +25,7 @@ class ShellController extends Controller{
 	public function select(){
 		$news=D('Shell');
 		$id=$_POST['id'];
+<<<<<<< HEAD
 		// dump($id);
 		$Model=M('shell');
 		// $pro=$Model->where("sid=".$id)->find();
@@ -37,6 +38,12 @@ class ShellController extends Controller{
 			echo $color1;
 
 		}
+=======
+		$Model=M('screen');
+		$pro=$news->getFind($Model,$id);
+		$string=implode('&',$pro);
+		echo $string;
+>>>>>>> 422c986c534d8b4a518a2bbd34f1c662bce98654
 	}
 
 	public function insert(){
