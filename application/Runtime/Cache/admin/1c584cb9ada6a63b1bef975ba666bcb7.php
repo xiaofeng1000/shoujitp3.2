@@ -39,7 +39,8 @@ $(function(){
         </ul>
 
         <div class="user">
-            欢迎<span><?php echo ($user); ?></span>用户
+            欢迎<span><?php
+ if($user){ echo $user; }else{ echo "请<a href='/shouji/admin.php/login/index'>登录</a>"; } ?></span>用户
             <!-- <i>消息</i>
             <b>5</b> -->
         </div>
@@ -75,8 +76,27 @@ $(function(){
         <li><cite></cite><a href="/shouji/admin.php/Modif/index" target="rightFrame">修改品牌</a><i></i></li>
         <li><cite></cite><a href="/shouji/admin.php/Phone/index" target="rightFrame">手机型号</a><i></i></li>
         <li><cite></cite><a href="/shouji/admin.php/Brand/index" target="rightFrame">手机品牌</a><i></i></li>
-        </ul>     
-    </dd>   
+    </ul>     
+    </dd>
+    <dd>
+        <div class="title">
+        <span><img src="/shouji/Public/admin/images/leftico02.png" /></span>分公司管理
+        </div>
+        <ul class="menuson">
+            <li><cite></cite><a href="/shouji/admin.php/Filiale/index" target="rightFrame">分公司列表</a><i></i></li>
+            </ul>     
+    </dd> 
+    <dd>
+        <div class="title">
+            <span><img src="/shouji/Public/admin/images/leftico02.png" /></span>关于我们
+        </div>
+
+        <ul class="menuson"> 
+            <li><cite></cite><a href="/shouji/admin.php/About/index" target="rightFrame">关于我们</a><i></i></li>
+            <li><cite></cite><a href="/shouji/admin.php/Contact/index" target="rightFrame">联系我们</a><i></i></li>
+            <li><cite></cite><a href="/shouji/admin.php/Join/index" target="rightFrame">加入我们</a><i></i></li>
+        </ul>
+    </dd> 
     </dl>
     <div style="float: right; width: 90%;height: 500px">
     <iframe scrolling="auto" rameborder="0" src="" name="rightFrame" width="100%" height="100%"></iframe>
