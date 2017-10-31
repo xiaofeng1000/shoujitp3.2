@@ -2,7 +2,7 @@
 namespace admin\Controller;
 use Think\Controller;
 
-class SpoilageController extends Controller{
+class SpoilageController extends AdminController{
 	public function index(){
 		$news=D('Spoilage');
 		$Model=M('classification');

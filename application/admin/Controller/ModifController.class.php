@@ -2,7 +2,7 @@
 namespace admin\Controller;
 use Think\Controller;
 
-class ModifController extends Controller{
+class ModifController extends AdminController{
 	public function index(){
 		$news=D('Modif');
 

@@ -1,7 +1,7 @@
 <?php
 namespace admin\Controller;
 use Think\Controller;
-class ListController extends Controller {
+class ListController extends AdminController {
     public function index(){
 
     	$news=D('Index');

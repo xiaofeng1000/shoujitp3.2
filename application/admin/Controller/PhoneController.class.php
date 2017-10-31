@@ -2,7 +2,7 @@
 namespace admin\Controller;
 use Think\Controller;
 
-class PhoneController extends Controller{
+class PhoneController extends AdminController{
 	public function index(){
 		$news=D('Phone');
 		$Model=M('model_number');

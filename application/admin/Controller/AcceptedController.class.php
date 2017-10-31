@@ -2,7 +2,7 @@
 namespace admin\Controller;
 use Think\Controller;
 
-class AcceptedController extends Controller{
+class AcceptedController extends AdminController{
 	public function index(){
 		$news=D('Accepted');
 		$Model=M('information');

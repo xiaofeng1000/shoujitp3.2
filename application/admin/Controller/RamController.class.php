@@ -2,7 +2,7 @@
 namespace admin\Controller;
 use Think\Controller;
 
-class RamController extends Controller{
+class RamController extends AdminController{
 	public function index(){
 		$news=D('Ram');
 		$Model=M('Ram');

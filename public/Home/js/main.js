@@ -77,6 +77,7 @@ $(function(){
 				},
 				success:function(id){
 					if(id){
+						// alert(id);
 						window.location.href='/shouji/index.php/service/index/id/'+id;
 					}
 				}

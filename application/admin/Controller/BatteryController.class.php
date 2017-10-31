@@ -2,7 +2,7 @@
 namespace admin\Controller;
 use Think\Controller;
 
-class BatteryController extends Controller{
+class BatteryController extends AdminController{
 	public function index(){
 		//实例化
 		$news=D('Battery');

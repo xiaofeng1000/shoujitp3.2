@@ -2,7 +2,7 @@
 namespace admin\Controller;
 use Think\Controller;
 
-class ScreenController extends Controller{
+class ScreenController extends AdminController{
 	public function index(){
 		$news=D('Screen');
 		$Model=M('screen');

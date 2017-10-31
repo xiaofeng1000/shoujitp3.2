@@ -177,10 +177,13 @@ function next(id){
       var Service="到店维修";
     }
     var str=window.location.href;
+    console.log(str);
     str=str.substr(str.indexOf("id")+3);
     var user=$('#name').val();
     var Contact=$('#tel').val();
     var path2=$('#textaddress').val();
+    
+    return;
     console.log(path1);
     console.log(Service);
     console.log(user);

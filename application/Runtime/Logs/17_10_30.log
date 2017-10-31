@@ -8147,3 +8147,791 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
 
+[ 2017-10-30T17:54:37+08:00 ] ::1 /shouji/index.php/Fault/index/id/8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `fault` [ RunTime:0.001001s ]
+ERR: 1146:Table 'sj.fault' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `fault`
+SQL: SHOW COLUMNS FROM `model_number` [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `classification` [ RunTime:0.003000s ]
+NOTIC: [2] Missing argument 2 for Home\Model\FaultModel::getShowIndex(), called in E:\PHP\www\shouji\application\Home\Controller\FaultController.class.php on line 14 and defined E:\PHP\www\shouji\application\Home\Model\FaultModel.class.php 第 7 行.
+NOTIC: [8] Undefined variable: bid E:\PHP\www\shouji\application\Home\Model\FaultModel.class.php 第 8 行.
+SQL: SELECT * FROM `classification`  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `model_number` WHERE ( bid=8 ) LIMIT 1   [ RunTime:0.010000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-10-30T17:54:42+08:00 ] ::1 /shouji/index.php/Fault/insert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fault` [ RunTime:0.001000s ]
+ERR: 1146:Table 'sj.fault' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `fault`
+SQL: SHOW COLUMNS FROM `information` [ RunTime:0.002000s ]
+SQL: INSERT INTO `information` (`image`,`Model_number`,`color`,`Damage_reason`,`total_cost`) VALUES ('','iPhone 5s','金色','内屏显示异常￥998,',998) [ RunTime:0.111006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-10-30T17:54:42+08:00 ] ::1 /shouji/index.php/service/index/id/218
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-10-30T17:54:50+08:00 ] ::1 /shouji/index.php/Fault/insert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fault` [ RunTime:0.001000s ]
+ERR: 1146:Table 'sj.fault' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `fault`
+SQL: SHOW COLUMNS FROM `information` [ RunTime:0.005000s ]
+SQL: INSERT INTO `information` (`image`,`Model_number`,`color`,`Damage_reason`,`total_cost`) VALUES ('','iPhone 5s','金色','电池￥198,',198) [ RunTime:0.052003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-10-30T17:54:50+08:00 ] ::1 /shouji/index.php/service/index/id/219
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-10-30T17:59:05+08:00 ] ::1 /shouji/index.php/Fault/index/id/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fault` [ RunTime:0.002000s ]
+ERR: 1146:Table 'sj.fault' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `fault`
+SQL: SHOW COLUMNS FROM `model_number` [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `classification` [ RunTime:0.002000s ]
+NOTIC: [2] Missing argument 2 for Home\Model\FaultModel::getShowIndex(), called in E:\PHP\www\shouji\application\Home\Controller\FaultController.class.php on line 14 and defined E:\PHP\www\shouji\application\Home\Model\FaultModel.class.php 第 7 行.
+NOTIC: [8] Undefined variable: bid E:\PHP\www\shouji\application\Home\Model\FaultModel.class.php 第 8 行.
+SQL: SELECT * FROM `classification`  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `model_number` WHERE ( bid=2 ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-10-30T17:59:08+08:00 ] ::1 /shouji/index.php/Fault/insert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `fault` [ RunTime:0.002000s ]
+ERR: 1146:Table 'sj.fault' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `fault`
+SQL: SHOW COLUMNS FROM `information` [ RunTime:0.002001s ]
+SQL: INSERT INTO `information` (`image`,`Model_number`,`color`,`Damage_reason`,`total_cost`) VALUES ('','iPhone 7','黑色','内屏显示异常￥998,',998) [ RunTime:0.057003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-10-30T17:59:08+08:00 ] ::1 /shouji/index.php/service/index/id/220
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-10-30T18:15:32+08:00 ] ::1 /shouji/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: id E:\PHP\www\shouji\application\Home\Controller\IndexController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `index` [ RunTime:0.001000s ]
+ERR: 1146:Table 'sj.index' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `index`
+SQL: SHOW COLUMNS FROM `shouji` [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `model_number` [ RunTime:0.001000s ]
+NOTIC: [2] Missing argument 1 for Think\Model::where(), called in E:\PHP\www\shouji\application\Home\Controller\IndexController.class.php on line 28 and defined E:\PHP\www\shouji\ThinkPHP\Library\Think\Model.class.php 第 1598 行.
+NOTIC: [8] Undefined variable: where E:\PHP\www\shouji\ThinkPHP\Library\Think\Model.class.php 第 1606 行.
+NOTIC: [8] Undefined variable: where E:\PHP\www\shouji\ThinkPHP\Library\Think\Model.class.php 第 1609 行.
+NOTIC: [8] Undefined variable: where E:\PHP\www\shouji\ThinkPHP\Library\Think\Model.class.php 第 1617 行.
+SQL: SELECT * FROM `model_number` LIMIT 0,8   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `shouji`  [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 1 for Think\Controller::show(), called in E:\PHP\www\shouji\application\Home\Controller\IndexController.class.php on line 34 and defined E:\PHP\www\shouji\ThinkPHP\Library\Think\Controller.class.php 第 68 行.
+NOTIC: [8] Undefined variable: content E:\PHP\www\shouji\ThinkPHP\Library\Think\Controller.class.php 第 69 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-10-30T18:15:35+08:00 ] ::1 /shouji/index.php/Fault/index/id/8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fault` [ RunTime:0.001000s ]
+ERR: 1146:Table 'sj.fault' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `fault`
+SQL: SHOW COLUMNS FROM `model_number` [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `classification` [ RunTime:0.002000s ]
+NOTIC: [2] Missing argument 2 for Home\Model\FaultModel::getShowIndex(), called in E:\PHP\www\shouji\application\Home\Controller\FaultController.class.php on line 14 and defined E:\PHP\www\shouji\application\Home\Model\FaultModel.class.php 第 7 行.
+NOTIC: [8] Undefined variable: bid E:\PHP\www\shouji\application\Home\Model\FaultModel.class.php 第 8 行.
+SQL: SELECT * FROM `classification`  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `model_number` WHERE ( bid=8 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-10-30T18:15:44+08:00 ] ::1 /shouji/index.php/Fault/insert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `fault` [ RunTime:0.001000s ]
+ERR: 1146:Table 'sj.fault' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `fault`
+SQL: SHOW COLUMNS FROM `information` [ RunTime:0.005000s ]
+SQL: INSERT INTO `information` (`image`,`Model_number`,`color`,`Damage_reason`,`total_cost`) VALUES ('','iPhone 5s','金色','内屏显示异常￥998,外屏碎(显示正常)￥100,',1098) [ RunTime:0.072004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-10-30T18:15:44+08:00 ] ::1 /shouji/index.php/service/index/id/221
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-10-30T18:16:03+08:00 ] ::1 /shouji/index.php/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: id E:\PHP\www\shouji\application\Home\Controller\IndexController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `index` [ RunTime:0.002000s ]
+ERR: 1146:Table 'sj.index' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `index`
+SQL: SHOW COLUMNS FROM `shouji` [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `model_number` [ RunTime:0.006001s ]
+NOTIC: [2] Missing argument 1 for Think\Model::where(), called in E:\PHP\www\shouji\application\Home\Controller\IndexController.class.php on line 28 and defined E:\PHP\www\shouji\ThinkPHP\Library\Think\Model.class.php 第 1598 行.
+NOTIC: [8] Undefined variable: where E:\PHP\www\shouji\ThinkPHP\Library\Think\Model.class.php 第 1606 行.
+NOTIC: [8] Undefined variable: where E:\PHP\www\shouji\ThinkPHP\Library\Think\Model.class.php 第 1609 行.
+NOTIC: [8] Undefined variable: where E:\PHP\www\shouji\ThinkPHP\Library\Think\Model.class.php 第 1617 行.
+SQL: SELECT * FROM `model_number` LIMIT 0,8   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `shouji`  [ RunTime:0.001000s ]
+NOTIC: [2] Missing argument 1 for Think\Controller::show(), called in E:\PHP\www\shouji\application\Home\Controller\IndexController.class.php on line 34 and defined E:\PHP\www\shouji\ThinkPHP\Library\Think\Controller.class.php 第 68 行.
+NOTIC: [8] Undefined variable: content E:\PHP\www\shouji\ThinkPHP\Library\Think\Controller.class.php 第 69 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-10-30T18:16:04+08:00 ] ::1 /shouji/index.php/Fault/index/id/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `fault` [ RunTime:0.001000s ]
+ERR: 1146:Table 'sj.fault' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `fault`
+SQL: SHOW COLUMNS FROM `model_number` [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `classification` [ RunTime:0.003000s ]
+NOTIC: [2] Missing argument 2 for Home\Model\FaultModel::getShowIndex(), called in E:\PHP\www\shouji\application\Home\Controller\FaultController.class.php on line 14 and defined E:\PHP\www\shouji\application\Home\Model\FaultModel.class.php 第 7 行.
+NOTIC: [8] Undefined variable: bid E:\PHP\www\shouji\application\Home\Model\FaultModel.class.php 第 8 行.
+SQL: SELECT * FROM `classification`  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `model_number` WHERE ( bid=2 ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-10-30T18:16:09+08:00 ] ::1 /shouji/index.php/Fault/insert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `fault` [ RunTime:0.001001s ]
+ERR: 1146:Table 'sj.fault' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `fault`
+SQL: SHOW COLUMNS FROM `information` [ RunTime:0.002000s ]
+SQL: INSERT INTO `information` (`image`,`Model_number`,`color`,`Damage_reason`,`total_cost`) VALUES ('','iPhone 7','金色','内屏显示异常￥998,',998) [ RunTime:0.116006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-10-30T18:16:09+08:00 ] ::1 /shouji/index.php/service/index/id/222
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-10-30T18:32:04+08:00 ] ::1 /shouji/index.php/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: id E:\PHP\www\shouji\application\Home\Controller\IndexController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `index` [ RunTime:0.001000s ]
+ERR: 1146:Table 'sj.index' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `index`
+SQL: SHOW COLUMNS FROM `shouji` [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `model_number` [ RunTime:0.002000s ]
+NOTIC: [2] Missing argument 1 for Think\Model::where(), called in E:\PHP\www\shouji\application\Home\Controller\IndexController.class.php on line 28 and defined E:\PHP\www\shouji\ThinkPHP\Library\Think\Model.class.php 第 1598 行.
+NOTIC: [8] Undefined variable: where E:\PHP\www\shouji\ThinkPHP\Library\Think\Model.class.php 第 1606 行.
+NOTIC: [8] Undefined variable: where E:\PHP\www\shouji\ThinkPHP\Library\Think\Model.class.php 第 1609 行.
+NOTIC: [8] Undefined variable: where E:\PHP\www\shouji\ThinkPHP\Library\Think\Model.class.php 第 1617 行.
+SQL: SELECT * FROM `model_number` LIMIT 0,8   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `shouji`  [ RunTime:0.001000s ]
+NOTIC: [2] Missing argument 1 for Think\Controller::show(), called in E:\PHP\www\shouji\application\Home\Controller\IndexController.class.php on line 34 and defined E:\PHP\www\shouji\ThinkPHP\Library\Think\Controller.class.php 第 68 行.
+NOTIC: [8] Undefined variable: content E:\PHP\www\shouji\ThinkPHP\Library\Think\Controller.class.php 第 69 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-10-30T18:32:06+08:00 ] ::1 /shouji/index.php/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: id E:\PHP\www\shouji\application\Home\Controller\IndexController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `index` [ RunTime:0.001000s ]
+ERR: 1146:Table 'sj.index' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `index`
+SQL: SHOW COLUMNS FROM `shouji` [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `model_number` [ RunTime:0.003000s ]
+NOTIC: [2] Missing argument 1 for Think\Model::where(), called in E:\PHP\www\shouji\application\Home\Controller\IndexController.class.php on line 28 and defined E:\PHP\www\shouji\ThinkPHP\Library\Think\Model.class.php 第 1598 行.
+NOTIC: [8] Undefined variable: where E:\PHP\www\shouji\ThinkPHP\Library\Think\Model.class.php 第 1606 行.
+NOTIC: [8] Undefined variable: where E:\PHP\www\shouji\ThinkPHP\Library\Think\Model.class.php 第 1609 行.
+NOTIC: [8] Undefined variable: where E:\PHP\www\shouji\ThinkPHP\Library\Think\Model.class.php 第 1617 行.
+SQL: SELECT * FROM `model_number` LIMIT 0,8   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `shouji`  [ RunTime:0.001000s ]
+NOTIC: [2] Missing argument 1 for Think\Controller::show(), called in E:\PHP\www\shouji\application\Home\Controller\IndexController.class.php on line 34 and defined E:\PHP\www\shouji\ThinkPHP\Library\Think\Controller.class.php 第 68 行.
+NOTIC: [8] Undefined variable: content E:\PHP\www\shouji\ThinkPHP\Library\Think\Controller.class.php 第 69 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-10-30T18:32:08+08:00 ] ::1 /shouji/index.php/Fault/index/id/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fault` [ RunTime:0.001000s ]
+ERR: 1146:Table 'sj.fault' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `fault`
+SQL: SHOW COLUMNS FROM `model_number` [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `classification` [ RunTime:0.001000s ]
+NOTIC: [2] Missing argument 2 for Home\Model\FaultModel::getShowIndex(), called in E:\PHP\www\shouji\application\Home\Controller\FaultController.class.php on line 14 and defined E:\PHP\www\shouji\application\Home\Model\FaultModel.class.php 第 7 行.
+NOTIC: [8] Undefined variable: bid E:\PHP\www\shouji\application\Home\Model\FaultModel.class.php 第 8 行.
+SQL: SELECT * FROM `classification`  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `model_number` WHERE ( bid=2 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2017-10-30T18:32:21+08:00 ] ::1 /shouji/index.php/Fault/insert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fault` [ RunTime:0.001000s ]
+ERR: 1146:Table 'sj.fault' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `fault`
+SQL: SHOW COLUMNS FROM `information` [ RunTime:0.001000s ]
+SQL: INSERT INTO `information` (`image`,`Model_number`,`color`,`Damage_reason`,`total_cost`) VALUES ('','iPhone 7','金色','内屏显示异常￥998,',998) [ RunTime:0.053003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-10-30T18:33:21+08:00 ] ::1 /shouji/index.php/Fault/index/id/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fault` [ RunTime:0.001000s ]
+ERR: 1146:Table 'sj.fault' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `fault`
+SQL: SHOW COLUMNS FROM `model_number` [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `classification` [ RunTime:0.001000s ]
+NOTIC: [2] Missing argument 2 for Home\Model\FaultModel::getShowIndex(), called in E:\PHP\www\shouji\application\Home\Controller\FaultController.class.php on line 14 and defined E:\PHP\www\shouji\application\Home\Model\FaultModel.class.php 第 7 行.
+NOTIC: [8] Undefined variable: bid E:\PHP\www\shouji\application\Home\Model\FaultModel.class.php 第 8 行.
+SQL: SELECT * FROM `classification`  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `model_number` WHERE ( bid=2 ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-10-30T18:33:26+08:00 ] ::1 /shouji/index.php/Fault/insert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fault` [ RunTime:0.005000s ]
+ERR: 1146:Table 'sj.fault' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `fault`
+SQL: SHOW COLUMNS FROM `information` [ RunTime:0.003000s ]
+SQL: INSERT INTO `information` (`image`,`Model_number`,`color`,`Damage_reason`,`total_cost`) VALUES ('','iPhone 7','金色','内屏显示异常￥998,',998) [ RunTime:0.082005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-10-30T18:42:23+08:00 ] ::1 /shouji/index.php/Fault/index/id/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `fault` [ RunTime:0.001000s ]
+ERR: 1146:Table 'sj.fault' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `fault`
+SQL: SHOW COLUMNS FROM `model_number` [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `classification` [ RunTime:0.011001s ]
+NOTIC: [2] Missing argument 2 for Home\Model\FaultModel::getShowIndex(), called in E:\PHP\www\shouji\application\Home\Controller\FaultController.class.php on line 14 and defined E:\PHP\www\shouji\application\Home\Model\FaultModel.class.php 第 7 行.
+NOTIC: [8] Undefined variable: bid E:\PHP\www\shouji\application\Home\Model\FaultModel.class.php 第 8 行.
+SQL: SELECT * FROM `classification`  [ RunTime:0.010000s ]
+SQL: SELECT * FROM `model_number` WHERE ( bid=2 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-10-30T18:42:28+08:00 ] ::1 /shouji/index.php/Fault/index/id/index.php/Fault/insert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fault` [ RunTime:0.001000s ]
+ERR: 1146:Table 'sj.fault' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `fault`
+SQL: SHOW COLUMNS FROM `model_number` [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `classification` [ RunTime:0.002000s ]
+NOTIC: [2] Missing argument 2 for Home\Model\FaultModel::getShowIndex(), called in E:\PHP\www\shouji\application\Home\Controller\FaultController.class.php on line 14 and defined E:\PHP\www\shouji\application\Home\Model\FaultModel.class.php 第 7 行.
+NOTIC: [8] Undefined variable: bid E:\PHP\www\shouji\application\Home\Model\FaultModel.class.php 第 8 行.
+SQL: SELECT * FROM `classification`  [ RunTime:0.005001s ]
+SQL: SELECT * FROM `model_number` WHERE ( bid=index.php ) LIMIT 1   [ RunTime:0.062003s ]
+ERR: 1054:Unknown column 'index.php' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `model_number` WHERE ( bid=index.php ) LIMIT 1  
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-10-30T18:42:54+08:00 ] ::1 /shouji/index.php/Fault/index/id/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fault` [ RunTime:0.001000s ]
+ERR: 1146:Table 'sj.fault' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `fault`
+SQL: SHOW COLUMNS FROM `model_number` [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `classification` [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 2 for Home\Model\FaultModel::getShowIndex(), called in E:\PHP\www\shouji\application\Home\Controller\FaultController.class.php on line 14 and defined E:\PHP\www\shouji\application\Home\Model\FaultModel.class.php 第 7 行.
+NOTIC: [8] Undefined variable: bid E:\PHP\www\shouji\application\Home\Model\FaultModel.class.php 第 8 行.
+SQL: SELECT * FROM `classification`  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `model_number` WHERE ( bid=2 ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-10-30T18:43:02+08:00 ] ::1 /shouji/index.php/Fault/insert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fault` [ RunTime:0.001000s ]
+ERR: 1146:Table 'sj.fault' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `fault`
+SQL: SHOW COLUMNS FROM `information` [ RunTime:0.000000s ]
+SQL: INSERT INTO `information` (`image`,`Model_number`,`color`,`Damage_reason`,`total_cost`) VALUES ('','iPhone 7','金色','内屏显示异常￥998,',998) [ RunTime:0.079004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-10-30T18:43:02+08:00 ] ::1 /shouji/index.php/service/index/id/225
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-10-30T19:20:01+08:00 ] ::1 /shouji/index.php/Fault/index/id/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fault` [ RunTime:0.001001s ]
+ERR: 1146:Table 'sj.fault' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `fault`
+SQL: SHOW COLUMNS FROM `model_number` [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `classification` [ RunTime:0.001000s ]
+NOTIC: [2] Missing argument 2 for Home\Model\FaultModel::getShowIndex(), called in E:\PHP\www\shouji\application\Home\Controller\FaultController.class.php on line 14 and defined E:\PHP\www\shouji\application\Home\Model\FaultModel.class.php 第 7 行.
+NOTIC: [8] Undefined variable: bid E:\PHP\www\shouji\application\Home\Model\FaultModel.class.php 第 8 行.
+SQL: SELECT * FROM `classification`  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `model_number` WHERE ( bid=2 ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-10-30T19:20:07+08:00 ] ::1 /shouji/index.php/Fault/insert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fault` [ RunTime:0.001000s ]
+ERR: 1146:Table 'sj.fault' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `fault`
+SQL: SHOW COLUMNS FROM `information` [ RunTime:0.003001s ]
+SQL: INSERT INTO `information` (`image`,`Model_number`,`color`,`Damage_reason`,`total_cost`) VALUES ('','iPhone 7','金色','内屏显示异常￥998,',998) [ RunTime:0.096005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-10-30T19:20:07+08:00 ] ::1 /shouji/index.php/service/index/id/226
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-10-30T19:20:26+08:00 ] ::1 /shouji/index.php/Service/update
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `information` [ RunTime:0.001000s ]
+SQL: UPDATE `information` SET `user`='afafaf',`Contact`='15511111111',`path`='天津市-天津市-河东区asfsafasdfa',`Service`='上门维修',`time`=1509362426 WHERE ( id=226 ) [ RunTime:0.123007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-10-30T19:20:26+08:00 ] ::1 /shouji/index.php/Order/index/id/226
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `information` [ RunTime:0.002000s ]
+SQL: SELECT * FROM `information` WHERE ( id=226 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: Damage_reason1 E:\PHP\www\shouji\application\Runtime\Cache\Home\7a8c435c1ece62f9d38cba7b60498309.php 第 34 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-10-30T19:20:48+08:00 ] ::1 /shouji/index.php/service/index/id/226
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-10-30T19:22:11+08:00 ] ::1 /shouji/index.php/service/index/id/226
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
