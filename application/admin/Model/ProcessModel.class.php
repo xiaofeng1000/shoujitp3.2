@@ -3,9 +3,9 @@ namespace admin\Model;
 use Think\Model;
 use Think\Controller;
 
-class AboutModel extends Model{
+class ProcessModel extends Model{
 	public function getSF($Model){
-		$pro=$Model->where("title='关于我们'")->find();
+		$pro=$Model->where("title='服务流程'")->find();
 		return $pro;
 	}
 

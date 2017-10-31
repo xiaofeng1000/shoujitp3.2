@@ -96,6 +96,17 @@ $(function(){
             <li><cite></cite><a href="/shouji/admin.php/Contact/index" target="rightFrame">联系我们</a><i></i></li>
             <li><cite></cite><a href="/shouji/admin.php/Join/index" target="rightFrame">加入我们</a><i></i></li>
         </ul>
+    </dd>
+    <dd>
+        <div class="title">
+            <span><img src="/shouji/Public/admin/images/leftico02.png" /></span>帮助中心
+        </div>
+
+        <ul class="menuson"> 
+            <li><cite></cite><a href="/shouji/admin.php/Process/index" target="rightFrame">服务流程</a><i></i></li>
+            <li><cite></cite><a href="/shouji/admin.php/Faq/index" target="rightFrame">常见问题</a><i></i></li>
+            <li><cite></cite><a href="/shouji/admin.php/Terms/index" target="rightFrame">服务条款</a><i></i></li>
+        </ul>
     </dd> 
     </dl>
     <div style="float: right; width: 90%;height: 500px">

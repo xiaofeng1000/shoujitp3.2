@@ -2,9 +2,9 @@
 namespace admin\Controller;
 use Think\Controller;
 
-class AboutController extends AdminController{
+class ContactController extends AdminController{
 	public function index(){
-		$news=D('About');
+		$news=D('Contact');
 		$Model=M('about');
 		$pro=$news->getSF($Model);
 		// echo $pro['content'];
@@ -20,15 +20,15 @@ class AboutController extends AdminController{
 		$content=$_POST['content'];
 		$data=array("content"=>$content);
 
-		$news=D('About');
+		$news=D('Contact');
 		$Model=M('about');
 
 		$pro=$news->getUpdate($Model,$id,$data);
 
 		if($pro){
-			$this->success("修改成功",U("About/index"));
+			$this->success("修改成功",U("Contact/index"));
 		}else{
-			$this->success("修改失败",U("About/index"));
+			$this->success("修改失败",U("Contact/index"));
 		}
 	}
 }
