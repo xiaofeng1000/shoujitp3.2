@@ -5,7 +5,17 @@ use Think\Conroller;
 
 class ShellModel extends Model{
 	public function getShowIndex($Model){
-		$pro=$Model->Select();
+		$pro=$Model->group('number')->Select();
+		return $pro;
+	}
+
+	public function getColor($Model,$number){
+		$pro=$Model->where("number='$number'")->select();
+		return $pro;
+	}
+
+	public function getPath($Model,$data){
+		$pro=$Model->where($data)->find();
 		return $pro;
 	}
 
@@ -18,4 +28,6 @@ class ShellModel extends Model{
 		$pro=$model->add($data);
 		return $pro;
 	}
+
+
 }

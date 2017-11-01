@@ -25,33 +25,37 @@
 	
 	<h2 class="cell-h2">预约下单</h2>
 	<div class="cell-order">
-		
+			
 			<div class="cell-order-member">
 				<select id="cell-model" name="select1">
-					<?php if(is_array($pro)): $i = 0; $__LIST__ = $pro;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><option value="<?php echo ($v["id"]); ?>"><?php echo ($v["number"]); ?></option>
+						<?php if(is_array($pro)): $i = 0; $__LIST__ = $pro;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><option value="<?php echo ($v["id"]); ?>"><?php echo ($v["number"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
 					<!-- <option value="2">iphone 8</option>
-					<option value="3">iphone 9</option> --><?php endforeach; endif; else: echo "" ;endif; ?>
+					<option value="3">iphone 9</option> -->
+					
 				</select>
 			</div>
 
 			<div class="cell-order-member">
 				<select id="screen-color">
-					<option value='0'>请选择</option>
+					
+					<!-- <option value='0'>请选择</option> -->
 					<!-- <option value="1">金色</option>
 					<option value="2">黑色</option>
 					<option value="3">白色</option> -->
-					<?php
- for($i=0;$i<count($color);$i++){ $colors[$i]=substr($color[$i],0,stripos($color[$i],"￥")); $price[$i]=substr($color[$i],stripos($color[$i],"￥")+3); echo "<option value='$price[$i]'>$colors[$i]</option>"; } ?>
+					<!-- <?php
+ for($i=0;$i<count($color);$i++){ $colors[$i]=substr($color[$i],0,stripos($color[$i],"￥")); $price[$i]=substr($color[$i],stripos($color[$i],"￥")+3); echo "<option value='$price[$i]'>$colors[$i]</option>"; } ?> -->
 				</select>
 			</div>
 			<div class="shell-info">
-				<img src="/shouji/Public/Home/images/38.png">
+
+				<img src="/shouji/Public/Home/<?php echo ($v["path"]); ?>">
 				<div>
-					<p>￥<span>368.00</span></p>
-					<p>玫瑰金后壳(改iphone7外观)</p>
+					<p>￥<span><?php echo ($v["price"]); ?></span></p>
+					<p><?php echo ($v["color"]); ?>后壳(改iphone7外观)</p>
 				</div>
 		
 			</div>
+			
 			<div class="cell-order-member">
 				<select id="cell-function">
 					<option value="1">上门维修</option>
@@ -133,41 +137,108 @@
 </body>
 <script>
 $(function(){
-	var color=$('#cell-model').find('option:selected').html();
-	$('#cell-model').change(function(){
-		var id=$(this).val();
-		console.log(id);
+	var number=$('#cell-model').find('option:selected').html();
+	$.ajax({
+		type:'POST',
+		url:'/shouji/index.php/Shell/color',
+		data:{
+			number:number,
+		},
+		success:function(data){
+			var tr="";
+			var tc="";
+			var color=new Array();
+			color= JSON.parse(data);
+			for(i=0;i<color.length;i++){
+				if(color[i]['color']){
+					tr+="<option value='"+color[i]['price']+"'>"+color[i]['color']+"</option>";
+					// tc+="<img src='/shouji/Public/Home/"+color[i]['path']+"'>";
+					// tc+="<div><p>￥<span>"+color[i]['price']+"</span></p><p>"+color[i]['color']+"后壳(改iphone7外观)</p></div>";
+
+				}
+			}
+			$('#screen-color').html(tr);
+			// $('.shell-info').html(tc);
+		}
+	});
+	// var color=$('#screen-color').val();
+	// console.log(color);
+	// $.ajax({
+	// 	type:'POST',
+	// 	url:'/shouji/index.php/Shell/path',
+	// 	data:{
+	// 		number:number,
+	// 		color:color,
+	// 	},
+	// 	success:function(data){
+	// 		var tc="";
+	// 		var path=new Array();
+	// 		path=JSON.parse(data);
+	// 		tc+="<img src='/shouji/Public/Home/"+path['path']+"'>";
+	// 		tc+="<div><p>￥<span>"+path['price']+"</span></p><p>"+path['color']+"后壳(改iphone7外观)</p></div>";
+
+	// 	}
+	// });
+
+});
+
+$('#cell-model').change(function(){
+		var number=$('#cell-model').find('option:selected').html();
+		
 		$.ajax({
 			type:'POST',
-			url:'/shouji/index.php/Shell/select',
+			url:'/shouji/index.php/Shell/color',
 			data:{
-				id:id,
+				number:number,
 			},
 			success:function(data){
 				if(data){
 					// console.log(data);
 					var tr="";
+					var tb="";
 					var color= new Array();
 					color= JSON.parse(data);
 					// console.log(color);
 					// console.log(color.length);
-					tr+="<option value='0'>请选择</option>";
-					for(i=0;i<color.length;i++){
-						colors=color[i].substr(0,color[i].indexOf("￥"));
-						price=color[i].substr(color[i].indexOf("￥")+1);
+					for(i=0;i<color.length;i++)
 						
-						tr+="<option value="+price+">"+colors+"</option>";
+						tr+="<option value="+color[i]['price']+">"+color[i]['color']+"</option>";
 					}
-					console.log(tr);
+					tb+="<img src='/shouji/Public/Home/"+color[0]['path']+"'>";
+					tb+="<div><p>￥<span>"+color[0]['price']+"</span></p><p>"+color[0]['color']+"后壳(改iphone7外观)</p></div>";
+
 					$('#screen-color').html(tr);
+					$('.shell-info').html(tb);
 					// alert(2);
 					// alert(2);
 				}		
-			}
-		});
+			});
+		
 	});
-});
 
+$('#screen-color').change(function(){
+	var number=$('#cell-model').find('option:selected').html();
+	var color=$('#screen-color').find('option:selected').html();
+	console.log(color);
+	$.ajax({
+		type:'POST',
+		url:'/shouji/index.php/Shell/path',
+		data:{
+			number:number,
+			color:color,
+		},
+		success:function(data){
+			var tc="";
+			var path=new Array();
+			path=JSON.parse(data);
+			tc+="<img src='/shouji/Public/Home/"+path['path']+"'>";
+			tc+="<div><p>￥<span>"+path['price']+"</span></p><p>"+path['color']+"后壳(改iphone7外观)</p></div>";
+			$('.shell-info').html(tc);
+		}
+		
+	});
+
+});
 
 $('#cell-submit').click(function(){
 	if ($('#name').val().trim() == '') {

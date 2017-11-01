@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>无标题文档</title>
+	<link href="__PUBLIC__/admin/css/style.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="__PUBLIC__/admin/js/jquery.js"></script>
+</head>
+
+<body>
+	<include file="public:left" />
+	<div class="place">
+		<span>位置：</span>
+		<ul class="placeul">
+    		<li><a href="#">更换外壳</a></li>
+    	</ul>
+	</div>
+	<div class="formbody">
+		<div id="usual1" class="usual">
+			<div id="tab1" class="tabson">
+			<form method="post" action="__APP__/Shell/insert">
+				<ul class="forminfo">
+				    <li>
+				    	<label>型号<b>*</b></label>
+				    	<input name="number" type="text" class="dfinput" value=""  style="width:518px;"/>
+				    </li>
+			   
+				    <li>
+				    	<label>颜色<b>*</b></label>
+				    	<input name="color" type="text" class="DRam" value=""  style="width:518px;height:40px; border:1px solid #A7B5BC" /></li> 
+				    </li>
+				    <li>
+				    	<label>价格<b>*</b></label>
+				    	<input name="price" type="text" class="DRam" value=""  style="width:518px;height:40px; border:1px solid #A7B5BC" /></li>   
+				    </li>
+			    
+			    	<li>
+						<label>添加图片<b>*</b></label>
+						<input type="file" name="path" id="fileField" />
+			    	</li>
+			    	<li>
+			    		<label>&nbsp;</label>
+			    		<input name="" type="submit" class="btn" value="马上发布"/>
+			    	</li>
+			    </ul>
+			</form>
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+
+</script>
+</html>

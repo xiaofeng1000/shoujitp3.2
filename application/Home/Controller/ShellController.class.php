@@ -8,18 +8,46 @@ class ShellController extends Controller{
 		$Model=M('shell');
 		$pro=$news->getShowIndex($Model);
 		// $pro=$Model->select();
-
 		// $arr=$Model->where()->find();
 
 		// $arr=$Model->find();
 
-		$color=explode("，",$pro[0]['colorprice']);
+		// $color=explode("，",$pro[0]['colorprice']);
 		// echo $Model->getLastSql();
-		// dump($color);
 
-		$this->assign('color',$color);
+		// $this->assign('color',$color);
+		
 		$this->assign('pro',$pro);
 		$this->display();
+	}
+
+	public function color(){
+		$number=$_POST['number'];
+
+		$news=D('Shell');
+		$Model=M('shell');
+		$pro=$news->getColor($Model,$number);
+		
+		if($pro){
+			$color=json_encode($pro);
+			echo $color;
+		}
+	}
+
+	public function path(){
+		$number=$_POST['number'];
+		$color=$_POST['color'];
+		$data=array("number"=>$number,"color"=>$color);
+
+		$news=D('Shell');
+		$Model=M('shell');
+		$pro=$news->getPath($Model,$data);
+		// echo $Model->getLastSql();
+		if($pro){
+			$path=json_encode($pro);
+
+			echo $path;
+		}
 	}
 
 	public function select(){
